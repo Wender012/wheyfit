@@ -318,6 +318,8 @@
     width: max-content;
     animation: marqueeScroll 24s linear infinite;
   }
+  #depoMarquee   { animation-duration: 40s; }
+  #bonusMarquee  { animation-duration: 28s; }
   .marquee-track:hover { animation-play-state: paused; }
   .marquee-track .receita-slide { min-width: 220px; width: 220px; flex-shrink: 0; }
   .marquee-track .bonus-card    { min-width: 260px; width: 260px; flex-shrink: 0; }
@@ -328,21 +330,7 @@
     .marquee-track .depo-card     { min-width: 280px; width: 280px; }
   }
 
-  /* CAROUSEL (depoimentos) */
-  .carousel-outer {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 8px 0 16px;
-  }
-  .carousel-track {
-    display: flex;
-    gap: 20px;
-    transition: transform 0.7s cubic-bezier(0.4,0,0.2,1);
-    will-change: transform;
-  }
+  /* CAROUSEL (dots apenas) */
   .carousel-dots {
     display: flex;
     justify-content: center;
@@ -460,21 +448,26 @@
   /* DEPOIMENTOS */
   .depoimentos-section { background: #fff; }
   .depo-card {
-    min-width: 420px;
-    width: 420px;
+    flex-shrink: 0;
     background: var(--cinza-claro);
     border-radius: 20px;
     padding: 0;
     box-shadow: 0 2px 14px rgba(0,0,0,0.05);
     border: 2px solid transparent;
     position: relative;
-    transition: border-color 0.35s;
     overflow: hidden;
-    flex-shrink: 0;
+    transition: border-color 0.35s;
   }
   .depo-card.hi { border-color: rgba(255,107,0,0.18); }
-  @media(max-width:920px) { .depo-card { min-width: 300px; width: 300px; } }
-  @media(max-width:580px) { .depo-card { min-width: calc(100vw - 40px); width: calc(100vw - 40px); } }
+
+  .marquee-track .depo-card {
+    min-width: 340px;
+    width: 340px;
+  }
+
+  @media(max-width:580px) {
+    .marquee-track .depo-card { min-width: 280px; width: 280px; }
+  }
   .depo-img-slot {
     width: 100%;
     aspect-ratio: 4/3;
@@ -673,7 +666,7 @@
   <div class="container">
     <h1>+200 recetas dulces con proteína para <span>no volver a sufrir en la dieta</span></h1>
     <p class="hero-sub">
-     <br>
+      Adelgaza, gana músculo y mantén tu dieta sin renunciar al sabor.<br>
       ¡Recetas rápidas, saludables y deliciosas para tu día a día!
     </p>
 
@@ -685,7 +678,7 @@
       ADQUIRIR AHORA
     </a>
     <p style="margin-top:14px; font-size:13px; color:#aaa;">
-      &nbsp;•&nbsp; 
+      🔒 Compra 100% segura &nbsp;•&nbsp; Acceso inmediato tras el pago
     </p>
   </div>
 </section>
@@ -718,40 +711,40 @@
   <div class="marquee-wrap">
     <div class="marquee-track" id="recMarquee">
       <div class="receita-slide">
-        <!--<img src="https://raw.githubusercontent.com/SEU_USER/SEU_REPO/main/img/receta1.jpg" alt="Receta 1">-->
-        <div class="receita-num">01</div>
-        <div class="receita-label-ph">Pega el link<br>de la imagen</div>
-        <div class="receita-badge">Receta 1</div>
+        <img src="mousse-fit.jpg" alt="Mousse Fit de Fresa">
+        <div class="receita-badge">Mousse Fit</div>
       </div>
       <div class="receita-slide">
-        <!--<img src="https://raw.githubusercontent.com/SEU_USER/SEU_REPO/main/img/receta2.jpg" alt="Receta 2">-->
-        <div class="receita-num">02</div>
-        <div class="receita-label-ph">Pega el link<br>de la imagen</div>
-        <div class="receita-badge">Receta 2</div>
+        <img src="brigadeiro.jpg" alt="Brigadeiro Proteico">
+        <div class="receita-badge">Brigadeiro Proteico</div>
       </div>
       <div class="receita-slide">
-        <!--<img src="https://raw.githubusercontent.com/SEU_USER/SEU_REPO/main/img/receta3.jpg" alt="Receta 3">-->
-        <div class="receita-num">03</div>
-        <div class="receita-label-ph">Pega el link<br>de la imagen</div>
-        <div class="receita-badge">Receta 3</div>
+        <img src="COOKIE.jpg" alt="Cookie Fit">
+        <div class="receita-badge">Cookie Fit</div>
       </div>
       <div class="receita-slide">
-        <!--<img src="https://raw.githubusercontent.com/SEU_USER/SEU_REPO/main/img/receta4.jpg" alt="Receta 4">-->
-        <div class="receita-num">04</div>
-        <div class="receita-label-ph">Pega el link<br>de la imagen</div>
-        <div class="receita-badge">Receta 4</div>
+        <img src="bolo-de-caneca-de-banana.jpg" alt="Pastel de Taza de Banana">
+        <div class="receita-badge">Pastel de Taza</div>
       </div>
       <div class="receita-slide">
-        <!--<img src="https://raw.githubusercontent.com/SEU_USER/SEU_REPO/main/img/receta5.jpg" alt="Receta 5">-->
-        <div class="receita-num">05</div>
-        <div class="receita-label-ph">Pega el link<br>de la imagen</div>
-        <div class="receita-badge">Receta 5</div>
+        <img src="bolo.jpg" alt="Pastel de Chocolate Fit">
+        <div class="receita-badge">Pastel de Chocolate</div>
       </div>
       <div class="receita-slide">
-        <!--<img src="https://raw.githubusercontent.com/SEU_USER/SEU_REPO/main/img/receta6.jpg" alt="Receta 6">-->
-        <div class="receita-num">06</div>
-        <div class="receita-label-ph">Pega el link<br>de la imagen</div>
-        <div class="receita-badge">Receta 6</div>
+        <img src="bombom-de-whey.jpg" alt="Bombón de Whey">
+        <div class="receita-badge">Bombón de Whey</div>
+      </div>
+      <div class="receita-slide">
+        <img src="panqueca-de-aveia.jpg" alt="Panqueque de Avena">
+        <div class="receita-badge">Panqueque de Avena</div>
+      </div>
+      <div class="receita-slide">
+        <img src="pudim-fit.jpg" alt="Pudín Fit">
+        <div class="receita-badge">Pudín Fit</div>
+      </div>
+      <div class="receita-slide">
+        <img src="brownie.jpg" alt="Brownie Proteico">
+        <div class="receita-badge">Brownie Proteico</div>
       </div>
     </div>
   </div>
@@ -824,7 +817,7 @@
   <div class="container">
     <h2 class="section-title">Lo que dicen nuestros <span>clientes</span></h2>
     <div class="divider"></div>
-    <p class="section-sub"></p>
+    <p class="section-sub">¡Más de 10.000 personas ya transformaron su alimentación con el e-book!</p>
   </div>
   <div class="marquee-wrap">
     <div class="marquee-track" id="depoMarquee">
@@ -1108,137 +1101,11 @@ document.querySelectorAll('.faq-item').forEach(function(item) {
   });
 });
 
-function initCarousel({ trackId, dotsId, perView, autoInterval = 3500 }) {
-  const track = document.getElementById(trackId);
-  const dotsWrap = document.getElementById(dotsId);
-  if (!track || !dotsWrap) return;
-
-  const slides = Array.from(track.children);
-  const total = slides.length;
-  let cur = 0, timer;
-
-  const pages = Math.ceil(total / perView);
-  for (let i = 0; i < pages; i++) {
-    const d = document.createElement('div');
-    d.className = 'carousel-dot' + (i === 0 ? ' active' : '');
-    d.addEventListener('click', () => goTo(i * perView));
-    dotsWrap.appendChild(d);
-  }
-
-  function slideW() {
-    const gap = parseInt(window.getComputedStyle(track).gap) || 20;
-    return slides[0].offsetWidth + gap;
-  }
-
-  function updateDots() {
-    const page = Math.min(Math.floor(cur / perView), pages - 1);
-    dotsWrap.querySelectorAll('.carousel-dot').forEach((d, i) => d.classList.toggle('active', i === page));
-  }
-
-  function goTo(idx) {
-    const max = total - perView;
-    cur = Math.max(0, Math.min(idx, max));
-    track.style.transform = `translateX(-${cur * slideW()}px)`;
-    updateDots();
-  }
-
-  function next() {
-    const nxt = cur + perView;
-    goTo(nxt >= total ? 0 : nxt);
-  }
-
-  function startAuto() { timer = setInterval(next, autoInterval); }
-  function stopAuto()  { clearInterval(timer); }
-
-  startAuto();
-  track.parentElement.addEventListener('mouseenter', stopAuto);
-  track.parentElement.addEventListener('mouseleave', startAuto);
-
-  let tx = 0;
-  track.addEventListener('touchstart', e => { tx = e.touches[0].clientX; stopAuto(); }, { passive: true });
-  track.addEventListener('touchend', e => {
-    const diff = tx - e.changedTouches[0].clientX;
-    if (Math.abs(diff) > 40) diff > 0 ? next() : goTo(cur - perView);
-    startAuto();
-  });
-
-  window.addEventListener('resize', () => goTo(cur));
-}
-
-const isMob = () => window.innerWidth <= 580;
-
-/* ── CAROUSEL DEPOIMENTOS — reescrito para funcionar sempre ── */
-(function() {
-  const track = document.getElementById('depoTrack');
-  const dotsWrap = document.getElementById('depoDots');
-  if (!track || !dotsWrap) return;
-
-  const cards = Array.from(track.children);
-  const total = cards.length;
-  let cur = 0, timer;
-
-  function perView() { return window.innerWidth <= 580 ? 1 : 2; }
-
-  function slideW() {
-    return cards[0].offsetWidth + 20; // 20 = gap
-  }
-
-  function pages() { return Math.ceil(total / perView()); }
-
-  function buildDots() {
-    dotsWrap.innerHTML = '';
-    for (let i = 0; i < pages(); i++) {
-      const d = document.createElement('div');
-      d.className = 'carousel-dot' + (i === 0 ? ' active' : '');
-      d.addEventListener('click', () => { goTo(i * perView()); });
-      dotsWrap.appendChild(d);
-    }
-  }
-
-  function updateDots() {
-    const page = Math.min(Math.floor(cur / perView()), pages() - 1);
-    dotsWrap.querySelectorAll('.carousel-dot').forEach((d, i) =>
-      d.classList.toggle('active', i === page));
-  }
-
-  function goTo(idx) {
-    const max = total - perView();
-    cur = Math.max(0, Math.min(idx, max));
-    track.style.transform = 'translateX(-' + (cur * slideW()) + 'px)';
-    updateDots();
-  }
-
-  function next() {
-    const nxt = cur + perView();
-    goTo(nxt >= total ? 0 : nxt);
-  }
-
-  function startAuto() { timer = setInterval(next, 4000); }
-  function stopAuto()  { clearInterval(timer); }
-
-  buildDots();
-  startAuto();
-
-  track.parentElement.addEventListener('mouseenter', stopAuto);
-  track.parentElement.addEventListener('mouseleave', startAuto);
-
-  let tx = 0;
-  track.addEventListener('touchstart', e => { tx = e.touches[0].clientX; stopAuto(); }, { passive: true });
-  track.addEventListener('touchend', e => {
-    const diff = tx - e.changedTouches[0].clientX;
-    if (Math.abs(diff) > 40) diff > 0 ? next() : goTo(cur - perView());
-    startAuto();
-  }, { passive: true });
-
-  window.addEventListener('resize', () => { buildDots(); goTo(0); });
-})();
-
 /* ── MARQUEE INFINITO — duplica itens para loop perfeito ── */
-['recMarquee', 'bonusMarquee'].forEach(id => {
+['recMarquee', 'bonusMarquee', 'depoMarquee'].forEach(id => {
   const track = document.getElementById(id);
   if (!track) return;
-  const clone = track.innerHTML;
-  track.innerHTML = clone + clone; // duplica para o loop ser seamless
+  track.innerHTML = track.innerHTML + track.innerHTML;
 });
 
 
