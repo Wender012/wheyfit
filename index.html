@@ -321,9 +321,11 @@
   .marquee-track:hover { animation-play-state: paused; }
   .marquee-track .receita-slide { min-width: 220px; width: 220px; flex-shrink: 0; }
   .marquee-track .bonus-card    { min-width: 260px; width: 260px; flex-shrink: 0; }
+  .marquee-track .depo-card     { min-width: 340px; width: 340px; flex-shrink: 0; }
   @media (max-width: 768px) {
     .marquee-track .receita-slide { min-width: 160px; width: 160px; }
     .marquee-track .bonus-card    { min-width: 220px; width: 220px; }
+    .marquee-track .depo-card     { min-width: 280px; width: 280px; }
   }
 
   /* CAROUSEL (depoimentos) */
@@ -338,7 +340,7 @@
   .carousel-track {
     display: flex;
     gap: 20px;
-    transition: transform 0.75s cubic-bezier(0.4,0,0.2,1);
+    transition: transform 0.7s cubic-bezier(0.4,0,0.2,1);
     will-change: transform;
   }
   .carousel-dots {
@@ -458,8 +460,8 @@
   /* DEPOIMENTOS */
   .depoimentos-section { background: #fff; }
   .depo-card {
-    min-width: calc(50% - 10px);
-    width: calc(50% - 10px);
+    min-width: 420px;
+    width: 420px;
     background: var(--cinza-claro);
     border-radius: 20px;
     padding: 0;
@@ -471,8 +473,8 @@
     flex-shrink: 0;
   }
   .depo-card.hi { border-color: rgba(255,107,0,0.18); }
-
-  /* slot de imagem */
+  @media(max-width:920px) { .depo-card { min-width: 300px; width: 300px; } }
+  @media(max-width:580px) { .depo-card { min-width: calc(100vw - 40px); width: calc(100vw - 40px); } }
   .depo-img-slot {
     width: 100%;
     aspect-ratio: 4/3;
@@ -514,7 +516,6 @@
     font-weight: 800; font-size: 17px; color: #fff;
   }
   .depo-nome { font-weight: 700; font-size: 14px; color: var(--preto); }
-  @media(max-width:580px) { .depo-card { min-width: 90%; width: 90%; } }
 
 
   /* PRICING — DOIS CARDS */
@@ -672,7 +673,7 @@
   <div class="container">
     <h1>+200 recetas dulces con proteína para <span>no volver a sufrir en la dieta</span></h1>
     <p class="hero-sub">
-      Adelgaza, gana músculo y mantén tu dieta sin renunciar al sabor.<br>
+     <br>
       ¡Recetas rápidas, saludables y deliciosas para tu día a día!
     </p>
 
@@ -684,7 +685,7 @@
       ADQUIRIR AHORA
     </a>
     <p style="margin-top:14px; font-size:13px; color:#aaa;">
-      🔒 Compra 100% segura &nbsp;•&nbsp; Acceso inmediato tras el pago
+      &nbsp;•&nbsp; 
     </p>
   </div>
 </section>
@@ -818,15 +819,15 @@
   <div class="carousel-dots" id="bonusDots"></div>
 </section>
 
-<!-- CARROSSEL DEPOIMENTOS -->
+<!-- MARQUEE DEPOIMENTOS -->
 <section class="depoimentos-section reveal">
   <div class="container">
     <h2 class="section-title">Lo que dicen nuestros <span>clientes</span></h2>
     <div class="divider"></div>
-    <p class="section-sub">¡Más de 10.000 personas ya transformaron su alimentación con el e-book!</p>
+    <p class="section-sub"></p>
   </div>
-  <div class="carousel-outer">
-    <div class="carousel-track" id="depoTrack">
+  <div class="marquee-wrap">
+    <div class="marquee-track" id="depoMarquee">
 
       <div class="depo-card hi">
         <div class="depo-img-slot">
@@ -854,7 +855,7 @@
         <div class="depo-body">
           <div class="depo-quote">"</div>
           <div class="depo-stars">★★★★★</div>
-          <p class="depo-text">Yo era de las que compraba proteína y la dejaba olvidada… siempre lo mismo, batido y ya. Con estas recetas empecé a hacer postres de verdad y ahora es la mejor parte de mi día. No parece dieta.</p>
+          <p class="depo-text">Yo era de las que compraba proteína y la dejaba olvidada… Con estas recetas empecé a hacer postres de verdad y ahora es la mejor parte de mi día. No parece dieta.</p>
           <div class="depo-autor">
             <div class="depo-avatar" style="background:linear-gradient(135deg,#f7971e,#ffd200)">M</div>
             <div><div class="depo-nome">María G.</div></div>
@@ -912,9 +913,10 @@
           </div>
         </div>
       </div>
+
       <div class="depo-card">
         <div class="depo-img-slot">
-          <!-- <img src="https://raw.githubusercontent.com/SEU_USER/SEU_REPO/main/img/depo4.jpg" alt="Depoimento 4"> -->
+          <!-- <img src="https://raw.githubusercontent.com/SEU_USER/SEU_REPO/main/img/depo4.jpg" alt="Marcos F."> -->
           <span>Foto / Screenshot</span>
           <span style="font-size:9px;opacity:.6;font-weight:400;text-transform:none">depo4.jpg</span>
         </div>
@@ -931,7 +933,7 @@
 
       <div class="depo-card">
         <div class="depo-img-slot">
-          <!-- <img src="https://raw.githubusercontent.com/SEU_USER/SEU_REPO/main/img/depo5.jpg" alt="Depoimento 5"> -->
+          <!-- <img src="https://raw.githubusercontent.com/SEU_USER/SEU_REPO/main/img/depo5.jpg" alt="Camila L."> -->
           <span>Foto / Screenshot</span>
           <span style="font-size:9px;opacity:.6;font-weight:400;text-transform:none">depo5.jpg</span>
         </div>
@@ -948,7 +950,7 @@
 
       <div class="depo-card">
         <div class="depo-img-slot">
-          <!-- <img src="https://raw.githubusercontent.com/SEU_USER/SEU_REPO/main/img/depo6.jpg" alt="Depoimento 6"> -->
+          <!-- <img src="https://raw.githubusercontent.com/SEU_USER/SEU_REPO/main/img/depo6.jpg" alt="Thiago B."> -->
           <span>Foto / Screenshot</span>
           <span style="font-size:9px;opacity:.6;font-weight:400;text-transform:none">depo6.jpg</span>
         </div>
@@ -965,7 +967,7 @@
 
       <div class="depo-card">
         <div class="depo-img-slot">
-          <!-- <img src="https://raw.githubusercontent.com/SEU_USER/SEU_REPO/main/img/depo7.jpg" alt="Depoimento 7"> -->
+          <!-- <img src="https://raw.githubusercontent.com/SEU_USER/SEU_REPO/main/img/depo7.jpg" alt="Laura V."> -->
           <span>Foto / Screenshot</span>
           <span style="font-size:9px;opacity:.6;font-weight:400;text-transform:none">depo7.jpg</span>
         </div>
@@ -982,7 +984,7 @@
 
       <div class="depo-card">
         <div class="depo-img-slot">
-          <!-- <img src="https://raw.githubusercontent.com/SEU_USER/SEU_REPO/main/img/depo8.jpg" alt="Depoimento 8"> -->
+          <!-- <img src="https://raw.githubusercontent.com/SEU_USER/SEU_REPO/main/img/depo8.jpg" alt="Diego S."> -->
           <span>Foto / Screenshot</span>
           <span style="font-size:9px;opacity:.6;font-weight:400;text-transform:none">depo8.jpg</span>
         </div>
@@ -999,7 +1001,7 @@
 
       <div class="depo-card">
         <div class="depo-img-slot">
-          <!-- <img src="https://raw.githubusercontent.com/SEU_USER/SEU_REPO/main/img/depo9.jpg" alt="Depoimento 9"> -->
+          <!-- <img src="https://raw.githubusercontent.com/SEU_USER/SEU_REPO/main/img/depo9.jpg" alt="Patricia N."> -->
           <span>Foto / Screenshot</span>
           <span style="font-size:9px;opacity:.6;font-weight:400;text-transform:none">depo9.jpg</span>
         </div>
@@ -1016,7 +1018,6 @@
 
     </div>
   </div>
-  <div class="carousel-dots" id="depoDots"></div>
 
   <div style="text-align:center; margin-top:40px;">
     <a href="#plan-basico" class="btn-cta">ADQUIRIR AHORA</a>
@@ -1081,64 +1082,6 @@
 </section>
 
 <!-- FAQ -->
-<section class="faq-section reveal">
-  <div class="container">
-    <h2 class="section-title">Preguntas <span>Frecuentes</span></h2>
-    <div class="divider"></div>
-    <div class="faq-list">
-
-      <div class="faq-item">
-        <button class="faq-q">
-          ¿Cómo recibo el acceso?
-          <span class="faq-chev">▾</span>
-        </button>
-        <div class="faq-ans">En cuanto se confirma el pago, recibes el enlace en tu correo al instante. Todo es digital, acceso inmediato, sin esperar ningún envío físico.</div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q">
-          ¿Necesito saber cocinar?
-          <span class="faq-chev">▾</span>
-        </button>
-        <div class="faq-ans">No. Las recetas fueron creadas para quienes nunca han cocinado. Cada una tiene modo de preparación detallado con fotos reales. Si sabes usar un microondas, ya puedes hacer la mayoría.</div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q">
-          ¿Es apto para diabéticos?
-          <span class="faq-chev">▾</span>
-        </button>
-        <div class="faq-ans">Sí. Hay varias opciones con edulcorante natural y cero azúcar, todas identificadas en el e-book. Recomendamos siempre consultar a tu médico para adaptaciones específicas.</div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q">
-          ¿Puedo usar cualquier whey?
-          <span class="faq-chev">▾</span>
-        </button>
-        <div class="faq-ans">Sí. Las recetas funcionan con whey concentrado, aislado o hidrolizado, de cualquier sabor. Cada receta indica variaciones con lo que ya tengas en casa.</div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- CTA FINAL -->
-<section style="background:linear-gradient(135deg,#FF6B00,#FFB800); text-align:center; padding:64px 20px;">
-  <div class="container">
-    <h2 style="color:#fff; font-size:clamp(24px,4.5vw,40px); font-weight:900; margin-bottom:14px; line-height:1.2;">
-      ¡No pierdas más tiempo con dietas aburridas!
-    </h2>
-    <p style="color:rgba(255,255,255,0.88); font-size:17px; margin-bottom:34px; max-width:520px; margin-left:auto; margin-right:auto; line-height:1.65;">
-      Únete a más de 10.000 personas que ya están comiendo bien, viendo resultados y sin sufrimiento.
-    </p>
-    <a href="#plan-basico" class="btn-cta" style="background:linear-gradient(180deg,#fff 0%,#f0f0f0 100%); color:var(--laranja); box-shadow:0 8px 32px rgba(0,0,0,0.22);">
-      ADQUIRIR AHORA
-    </a>
-    <p style="color:rgba(255,255,255,0.65); margin-top:14px; font-size:13px;">🔒 Garantía de 7 días • Acceso inmediato</p>
-  </div>
-</section>
-
 <footer>
   <p><strong>200 Recetas Fit con Whey Protein</strong></p>
   <p style="margin-top:8px;">
@@ -1223,7 +1166,72 @@ function initCarousel({ trackId, dotsId, perView, autoInterval = 3500 }) {
 }
 
 const isMob = () => window.innerWidth <= 580;
-initCarousel({ trackId: 'depoTrack', dotsId: 'depoDots', perView: isMob() ? 1 : 2, autoInterval: 4200 });
+
+/* ── CAROUSEL DEPOIMENTOS — reescrito para funcionar sempre ── */
+(function() {
+  const track = document.getElementById('depoTrack');
+  const dotsWrap = document.getElementById('depoDots');
+  if (!track || !dotsWrap) return;
+
+  const cards = Array.from(track.children);
+  const total = cards.length;
+  let cur = 0, timer;
+
+  function perView() { return window.innerWidth <= 580 ? 1 : 2; }
+
+  function slideW() {
+    return cards[0].offsetWidth + 20; // 20 = gap
+  }
+
+  function pages() { return Math.ceil(total / perView()); }
+
+  function buildDots() {
+    dotsWrap.innerHTML = '';
+    for (let i = 0; i < pages(); i++) {
+      const d = document.createElement('div');
+      d.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+      d.addEventListener('click', () => { goTo(i * perView()); });
+      dotsWrap.appendChild(d);
+    }
+  }
+
+  function updateDots() {
+    const page = Math.min(Math.floor(cur / perView()), pages() - 1);
+    dotsWrap.querySelectorAll('.carousel-dot').forEach((d, i) =>
+      d.classList.toggle('active', i === page));
+  }
+
+  function goTo(idx) {
+    const max = total - perView();
+    cur = Math.max(0, Math.min(idx, max));
+    track.style.transform = 'translateX(-' + (cur * slideW()) + 'px)';
+    updateDots();
+  }
+
+  function next() {
+    const nxt = cur + perView();
+    goTo(nxt >= total ? 0 : nxt);
+  }
+
+  function startAuto() { timer = setInterval(next, 4000); }
+  function stopAuto()  { clearInterval(timer); }
+
+  buildDots();
+  startAuto();
+
+  track.parentElement.addEventListener('mouseenter', stopAuto);
+  track.parentElement.addEventListener('mouseleave', startAuto);
+
+  let tx = 0;
+  track.addEventListener('touchstart', e => { tx = e.touches[0].clientX; stopAuto(); }, { passive: true });
+  track.addEventListener('touchend', e => {
+    const diff = tx - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) diff > 0 ? next() : goTo(cur - perView());
+    startAuto();
+  }, { passive: true });
+
+  window.addEventListener('resize', () => { buildDots(); goTo(0); });
+})();
 
 /* ── MARQUEE INFINITO — duplica itens para loop perfeito ── */
 ['recMarquee', 'bonusMarquee'].forEach(id => {
