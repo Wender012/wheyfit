@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>200 Recetas Fit con Whey Protein | El E-book Original</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<script>
+  window.pixelId = "69a22a4b27e9a968d751df3d";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+<script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-subids async defer></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --laranja: #FF6B00;
+    --laranja-claro: #FF8C33;
+    --laranja-escuro: #E05A00;
+    --amarelo: #FFB800;
+    --branco: #FFFFFF;
+    --cinza-claro: #F7F7F7;
+    --cinza-medio: #EEEEEE;
+    --cinza-texto: #555555;
+    --preto: #1A1A1A;
+  }
+
+  body {
+    font-family: 'Lato', sans-serif;
+    background: var(--branco);
+    color: var(--preto);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; }
+
+  /* ── FADE-IN CSS PURO — sem JS, sem bug ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* hero — stagger rápido */
+  .hero-tag        { animation: fadeUp 0.32s 0.06s ease both; }
+  .hero h1         { animation: fadeUp 0.32s 0.13s ease both; }
+  .hero-sub        { animation: fadeUp 0.32s 0.19s ease both; }
+  .hero-mockup-wrap{ animation: fadeUp 0.32s 0.24s ease both; }
+  .hero .btn-cta   { animation: fadeUp 0.32s 0.29s ease both; }
+  .hero p[style]   { animation: fadeUp 0.32s 0.33s ease both; }
+
+  /* seções — fade simples ao carregar */
+  .reveal { animation: fadeUp 0.38s 0.08s ease both; }
+
+  /* ── MOBILE COMPLETO ── */
+  @media (max-width: 768px) {
+    section { padding: 44px 16px; }
+
+    .hero { padding: 40px 16px 40px; }
+    .hero h1 { font-size: clamp(24px, 7.5vw, 36px); line-height: 1.18; }
+    .hero-sub { font-size: 14.5px; margin-bottom: 24px; }
+    .hero-mockup-wrap { max-width: 200px; }
+
+    .btn-cta { font-size: 14px !important; padding: 16px 24px !important; width: 100%; max-width: 360px; }
+
+    .checkitems { grid-template-columns: 1fr; gap: 10px; }
+    .checkitem { font-size: 14px; padding: 14px 16px; }
+
+    .carousel-outer { padding: 4px 0 10px; }
+    .carousel-dot { width: 7px; height: 7px; }
+    .carousel-dot.active { width: 20px; }
+    .receita-slide { min-width: calc(60% - 10px); }
+    .bonus-card    { min-width: calc(84% - 10px); padding: 22px 18px; }
+    .bonus-card h3 { font-size: 13px; }
+    .depo-card     { min-width: 88%; padding: 22px 18px; }
+    .depo-text     { font-size: 13px; }
+
+    .garantia-box { padding: 28px 18px; }
+    .garantia-box h2 { font-size: 22px; }
+    .g-icon { font-size: 48px !important; }
+
+    .pricing-grid { gap: 32px; flex-direction: column !important; align-items: center; }
+    .preco-box { padding: 28px 18px; width: 100% !important; max-width: 100% !important; }
+    .preco-box.destaque { transform: scale(1) !important; }
+    .preco-popular-badge { font-size: 10px; padding: 4px 14px; }
+    .preco-valor { font-size: clamp(48px, 16vw, 64px); }
+    .preco-lista li { font-size: 13px; }
+
+    .faq-q { font-size: 13px; padding: 16px 16px; }
+    .faq-ans { font-size: 13px; }
+
+    .section-title { font-size: clamp(20px, 6vw, 28px); }
+    .section-sub { font-size: 14px; margin-bottom: 28px; }
+    .divider { margin-bottom: 20px; }
+  }
+
+  @media (max-width: 420px) {
+    .hero h1 { font-size: 22px; }
+    .receita-slide { min-width: calc(78% - 10px); }
+    .bonus-card    { min-width: 90%; }
+    .depo-card     { min-width: 94%; }
+    .btn-cta { font-size: 13px !important; }
+  }
+
+  .hero {
+    background: #ffffff;
+    padding: 60px 20px 56px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-tag {
+    display: inline-block;
+    background: var(--laranja);
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 18px;
+    border-radius: 100px;
+    margin-bottom: 22px;
+  }
+  .hero h1 {
+    font-size: clamp(28px, 6vw, 52px);
+    font-weight: 900;
+    line-height: 1.13;
+    color: var(--preto);
+    max-width: 780px;
+    margin: 0 auto 16px;
+  }
+  .hero h1 span { color: var(--laranja); }
+  .hero-sub {
+    font-size: clamp(15px, 2.5vw, 19px);
+    color: var(--cinza-texto);
+    max-width: 600px;
+    margin: 0 auto 32px;
+    line-height: 1.65;
+  }
+  .hero-mockup-wrap {
+    max-width: 620px;
+    width: 100%;
+    margin: 0 auto 36px;
+  }
+  .hero-mockup-wrap img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 24px 64px rgba(255,107,0,0.18);
+    display: block;
+  }
+  .hero-img-placeholder {
+    width: 100%;
+    aspect-ratio: 3/4;
+    border-radius: 18px;
+    box-shadow: 0 24px 64px rgba(255,107,0,0.18);
+    background: linear-gradient(145deg, #ffe0b2, #ffcc80);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    color: var(--laranja-escuro);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 20px;
+  }
+  .hero-img-placeholder .icon-ph { font-size: 40px; opacity: .5; margin-bottom: 4px; }
+  .hero-img-placeholder small { font-size: 10px; font-weight: 400; opacity: .6; text-transform: none; letter-spacing: 0; }
+
+  /* ── CTA iOS/APPLE ── */
+  .btn-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(180deg, var(--laranja-claro) 0%, var(--laranja) 48%, var(--laranja-escuro) 100%);
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: clamp(14px, 2.2vw, 17px);
+    padding: 18px 40px;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow:
+      0 1px 0 rgba(255,255,255,0.32) inset,
+      0 -2px 0 rgba(0,0,0,0.18) inset,
+      0 8px 28px rgba(255,107,0,0.38),
+      0 2px 6px rgba(0,0,0,0.14);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+  }
+  .btn-cta::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 50%;
+    background: linear-gradient(180deg, rgba(255,255,255,0.2) 0%, transparent 100%);
+    border-radius: 100px 100px 0 0;
+    pointer-events: none;
+  }
+  .btn-cta:hover {
+    transform: translateY(-2px) scale(1.022);
+    box-shadow:
+      0 1px 0 rgba(255,255,255,0.32) inset,
+      0 -2px 0 rgba(0,0,0,0.18) inset,
+      0 14px 40px rgba(255,107,0,0.48),
+      0 4px 12px rgba(0,0,0,0.18);
+  }
+  .btn-cta:active { transform: translateY(1px) scale(0.99); }
+  .btn-cta-green {
+    background: linear-gradient(180deg, #3ecf6e 0%, #22a84b 48%, #1a8c3c 100%);
+    box-shadow:
+      0 1px 0 rgba(255,255,255,0.32) inset,
+      0 -2px 0 rgba(0,0,0,0.18) inset,
+      0 8px 28px rgba(34,168,75,0.38),
+      0 2px 6px rgba(0,0,0,0.14);
+  }
+  .btn-cta-green:hover {
+    box-shadow:
+      0 1px 0 rgba(255,255,255,0.32) inset,
+      0 -2px 0 rgba(0,0,0,0.18) inset,
+      0 14px 40px rgba(34,168,75,0.48),
+      0 4px 12px rgba(0,0,0,0.18);
+  }
+  .btn-pulse { animation: pulse 2.4s ease-in-out infinite; }
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 1px 0 rgba(255,255,255,0.32) inset, 0 -2px 0 rgba(0,0,0,0.18) inset, 0 8px 28px rgba(255,107,0,0.38); }
+    50% { box-shadow: 0 1px 0 rgba(255,255,255,0.32) inset, 0 -2px 0 rgba(0,0,0,0.18) inset, 0 18px 48px rgba(255,107,0,0.58); transform: translateY(-2px); }
+  }
+
+  section { padding: 64px 20px; }
+  .container { max-width: 900px; margin: 0 auto; }
+  .section-title {
+    font-size: clamp(22px, 4vw, 36px);
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 10px;
+    color: var(--preto);
+    line-height: 1.2;
+  }
+  .section-title span { color: var(--laranja); }
+  .section-sub {
+    text-align: center;
+    color: var(--cinza-texto);
+    font-size: 15.5px;
+    max-width: 580px;
+    margin: 0 auto 44px;
+    line-height: 1.65;
+  }
+  .divider {
+    width: 52px; height: 4px;
+    background: linear-gradient(90deg, var(--laranja), var(--amarelo));
+    border-radius: 4px;
+    margin: 10px auto 28px;
+  }
+
+  /* PARA QUEM */
+  .para-quem { background: var(--cinza-claro); }
+  .checkitems {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  @media(max-width:520px) { .checkitems { grid-template-columns: 1fr; } }
+  .checkitem {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: #fff;
+    border-radius: 14px;
+    padding: 16px 18px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    font-size: 14.5px;
+    color: var(--cinza-texto);
+    font-weight: 600;
+    line-height: 1.4;
+  }
+  .checkitem .ck-icon {
+    width: 28px; height: 28px; min-width: 28px;
+    background: linear-gradient(135deg, var(--laranja-claro), var(--laranja));
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; font-size: 14px;
+    box-shadow: 0 2px 8px rgba(255,107,0,0.22);
+    margin-top: 1px;
+  }
+
+
+  /* ── MARQUEE INFINITO ── */
+  @keyframes marqueeScroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .marquee-wrap {
+    overflow: hidden;
+    width: 100%;
+    padding: 8px 0 16px;
+  }
+  .marquee-track {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: marqueeScroll 24s linear infinite;
+  }
+  .marquee-track:hover { animation-play-state: paused; }
+  .marquee-track .receita-slide { min-width: 220px; width: 220px; flex-shrink: 0; }
+  .marquee-track .bonus-card    { min-width: 260px; width: 260px; flex-shrink: 0; }
+  @media (max-width: 768px) {
+    .marquee-track .receita-slide { min-width: 160px; width: 160px; }
+    .marquee-track .bonus-card    { min-width: 220px; width: 220px; }
+  }
+
+  /* CAROUSEL (depoimentos) */
+  .carousel-outer {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 8px 0 16px;
+  }
+  .carousel-track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.75s cubic-bezier(0.4,0,0.2,1);
+    will-change: transform;
+  }
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+  }
+  .carousel-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: #ddd;
+    cursor: pointer;
+    transition: all 0.35s;
+  }
+  .carousel-dot.active {
+    width: 24px;
+    border-radius: 4px;
+    background: var(--laranja);
+  }
+
+
+  .receitas-section { background: #fff; }
+  .receita-slide {
+    min-width: calc(33.333% - 14px);
+    border-radius: 18px;
+    overflow: hidden;
+    background: var(--cinza-medio);
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 6px;
+    position: relative;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+    transition: transform 0.2s;
+    cursor: pointer;
+  }
+  .receita-slide:hover { transform: scale(1.03); }
+  .receita-slide img {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+  }
+  .receita-num { font-family: 'Montserrat', sans-serif; font-size: 32px; font-weight: 900; color: #ccc; }
+  .receita-label-ph {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px; font-weight: 700; color: #bbb;
+    text-transform: uppercase; letter-spacing: 1px;
+    text-align: center; padding: 0 10px; line-height: 1.4;
+  }
+  .receita-badge {
+    position: absolute;
+    bottom: 10px; left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255,107,0,0.85);
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px; font-weight: 700; letter-spacing: 1px;
+    text-transform: uppercase; padding: 4px 12px;
+    border-radius: 100px; white-space: nowrap;
+  }
+  @media(max-width:580px) { .receita-slide { min-width: calc(50% - 10px); } }
+
+  /* BONUS */
+  .bonus-section { background: var(--cinza-claro); }
+  .bonus-card {
+    min-width: calc(33.333% - 14px);
+    background: #fff;
+    border-radius: 20px;
+    padding: 28px 22px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    border: 2px solid transparent;
+    transition: border-color 0.3s, transform 0.2s;
+  }
+  .bonus-card:hover { border-color: var(--laranja); transform: translateY(-3px); }
+  .bonus-icon-wrap {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 14px;
+    overflow: hidden;
+    background: var(--cinza-medio);
+    display: flex; align-items: center; justify-content: center;
+    flex-direction: column;
+    gap: 6px;
+    color: #bbb;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px; font-weight: 700;
+    letter-spacing: 1px; text-transform: uppercase;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+  }
+  .bonus-icon-wrap img {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+  }
+  .bonus-card h3 { font-size: 14px; font-weight: 800; color: var(--preto); line-height: 1.35; }
+  .bonus-card p { font-size: 13px; color: var(--cinza-texto); line-height: 1.55; }
+  .bonus-badge-tag {
+    background: var(--laranja); color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px; font-weight: 700; letter-spacing: 1px;
+    text-transform: uppercase; padding: 4px 12px; border-radius: 100px;
+  }
+  @media(max-width:580px) { .bonus-card { min-width: calc(80% - 10px); } }
+
+  /* DEPOIMENTOS */
+  .depoimentos-section { background: #fff; }
+  .depo-card {
+    min-width: calc(50% - 10px);
+    width: calc(50% - 10px);
+    background: var(--cinza-claro);
+    border-radius: 20px;
+    padding: 0;
+    box-shadow: 0 2px 14px rgba(0,0,0,0.05);
+    border: 2px solid transparent;
+    position: relative;
+    transition: border-color 0.35s;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .depo-card.hi { border-color: rgba(255,107,0,0.18); }
+
+  /* slot de imagem */
+  .depo-img-slot {
+    width: 100%;
+    aspect-ratio: 4/3;
+    background: var(--cinza-medio);
+    display: flex; align-items: center; justify-content: center;
+    flex-direction: column; gap: 6px;
+    color: #bbb;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px; font-weight: 700;
+    letter-spacing: 1px; text-transform: uppercase;
+    text-align: center; padding: 10px;
+    position: relative;
+  }
+  .depo-img-slot img {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+  }
+
+  .depo-body {
+    padding: 22px 24px 24px;
+  }
+
+  .depo-quote {
+    position: absolute; top: 14px; right: 20px;
+    font-size: 52px; color: rgba(255,107,0,0.09);
+    font-family: Georgia, serif; line-height: 1;
+    z-index: 1;
+  }
+  .depo-stars { color: var(--laranja); font-size: 15px; letter-spacing: 2px; margin-bottom: 10px; }
+  .depo-text { font-size: 14px; color: var(--cinza-texto); line-height: 1.65; margin-bottom: 18px; font-style: italic; }
+  .depo-autor { display: flex; align-items: center; gap: 12px; }
+  .depo-avatar {
+    width: 42px; height: 42px; min-width: 42px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--laranja-claro), var(--amarelo));
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800; font-size: 17px; color: #fff;
+  }
+  .depo-nome { font-weight: 700; font-size: 14px; color: var(--preto); }
+  @media(max-width:580px) { .depo-card { min-width: 90%; width: 90%; } }
+
+
+  /* PRICING — DOIS CARDS */
+  .preco-section { background: #fff; text-align: center; }
+  .preco-section .section-title { color: var(--preto); }
+
+  .pricing-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 16px;
+  }
+
+  /* card secundário ($5) */
+  .preco-box {
+    flex: 1 1 280px;
+    max-width: 380px;
+    background: #fff;
+    border-radius: 28px;
+    padding: 36px 28px;
+    border: 1.5px solid #e5e5ea;
+    box-shadow:
+      0 2px 0 rgba(0,0,0,0.04),
+      0 8px 32px rgba(0,0,0,0.07);
+    text-align: center;
+    position: relative;
+  }
+
+  /* card destaque ($9) — laranja estilo iOS */
+  .preco-box.destaque {
+    background: linear-gradient(160deg, var(--laranja-claro) 0%, var(--laranja) 50%, var(--laranja-escuro) 100%);
+    border: none;
+    box-shadow:
+      0 1px 0 rgba(255,255,255,0.28) inset,
+      0 -3px 0 rgba(0,0,0,0.2) inset,
+      0 20px 60px rgba(255,107,0,0.42),
+      0 4px 16px rgba(0,0,0,0.14);
+    transform: scale(1.04);
+  }
+  .preco-box.destaque::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 52%;
+    background: linear-gradient(180deg, rgba(255,255,255,0.18) 0%, transparent 100%);
+    border-radius: 28px 28px 0 0;
+    pointer-events: none;
+  }
+  @media(max-width:680px) { .preco-box.destaque { transform: scale(1); } }
+
+  .preco-popular-badge {
+    position: absolute;
+    top: -14px; left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    color: var(--laranja);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px; font-weight: 800; letter-spacing: 1.5px;
+    text-transform: uppercase; padding: 5px 20px;
+    border-radius: 100px; white-space: nowrap;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  }
+  .preco-desconto-tag {
+    display: inline-block;
+    background: rgba(255,255,255,0.22); color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800; font-size: 12px;
+    padding: 5px 16px; border-radius: 100px;
+    letter-spacing: 1px; text-transform: uppercase; margin-bottom: 18px;
+  }
+  .preco-box:not(.destaque) .preco-desconto-tag {
+    background: var(--orange-light, #fff3e0); color: var(--laranja);
+  }
+  .preco-de { font-size: 17px; color: rgba(255,255,255,0.6); text-decoration: line-through; margin-bottom: 4px; }
+  .preco-box:not(.destaque) .preco-de { color: #aaa; }
+  .preco-por { font-size: 13px; color: rgba(255,255,255,0.7); margin-bottom: 4px; }
+  .preco-box:not(.destaque) .preco-por { color: #999; }
+  .preco-valor {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(48px, 10vw, 68px);
+    font-weight: 900; color: #fff;
+    line-height: 1; margin-bottom: 8px;
+  }
+  .preco-box:not(.destaque) .preco-valor { color: var(--laranja); }
+  .preco-parcelas { font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 24px; }
+  .preco-box:not(.destaque) .preco-parcelas { color: #999; }
+  .preco-parcelas strong { color: #fff; }
+  .preco-box:not(.destaque) .preco-parcelas strong { color: var(--preto); }
+  .preco-lista { list-style: none; margin-bottom: 24px; text-align: left; }
+  .preco-lista li {
+    display: flex; align-items: center; gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+    font-size: 13.5px; color: rgba(255,255,255,0.9);
+  }
+  .preco-box:not(.destaque) .preco-lista li {
+    border-bottom-color: #f0f0f0; color: var(--cinza-texto);
+  }
+  .preco-lista li::before { content: '✓'; color: #fff; font-weight: 900; font-size: 15px; }
+  .preco-box:not(.destaque) .preco-lista li::before { color: var(--laranja); }
+  .seguro-info {
+    display: flex; align-items: center; justify-content: center;
+    gap: 7px; margin-top: 14px;
+    color: rgba(255,255,255,0.55); font-size: 13px;
+  }
+  .preco-box:not(.destaque) .seguro-info { color: #aaa; }
+
+  /* FAQ */
+  .faq-section { background: var(--cinza-claro); }
+  .faq-list { max-width: 700px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+  .faq-item {
+    background: #fff; border-radius: 14px; overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.05);
+  }
+  .faq-q {
+    width: 100%; background: none; border: none; padding: 20px 22px;
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    cursor: pointer; font-family: 'Montserrat', sans-serif;
+    font-weight: 700; font-size: 14.5px; color: var(--preto); text-align: left;
+    transition: color 0.2s;
+  }
+  .faq-q:hover { color: var(--laranja); }
+  .faq-chev {
+    width: 24px; height: 24px; min-width: 24px; border-radius: 50%;
+    background: var(--cinza-medio); display: flex; align-items: center; justify-content: center;
+    font-size: 12px; transition: transform 0.3s, background 0.3s;
+  }
+  .faq-item.open .faq-chev { transform: rotate(180deg); background: var(--laranja); color: #fff; }
+  .faq-ans {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s;
+    font-size: 14px;
+    color: var(--cinza-texto);
+    line-height: 1.7;
+    padding: 0 22px;
+  }
+  .faq-item.open .faq-ans { padding: 0 22px 20px; }
+
+  footer {
+    background: #111; color: #777; text-align: center;
+    padding: 36px 20px; font-size: 13px; line-height: 1.85;
+  }
+  footer a { color: var(--laranja); text-decoration: none; }
+  footer strong { color: #fff; }
+
+
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container">
+    <h1>+200 recetas dulces con proteína para <span>no volver a sufrir en la dieta</span></h1>
+    <p class="hero-sub">
+      Adelgaza, gana músculo y mantén tu dieta sin renunciar al sabor.<br>
+      ¡Recetas rápidas, saludables y deliciosas para tu día a día!
+    </p>
+
+    <div class="hero-mockup-wrap">
+      <img src="IMAGEM1.jpg" alt="200 Recetas Fit con Whey Protein">
+    </div>
+
+    <a href="#plan-basico" class="btn-cta btn-cta-green btn-pulse" style="font-size:17px; padding:20px 46px;">
+      ADQUIRIR AHORA
+    </a>
+    <p style="margin-top:14px; font-size:13px; color:#aaa;">
+      🔒 Compra 100% segura &nbsp;•&nbsp; Acceso inmediato tras el pago
+    </p>
+  </div>
+</section>
+
+<section class="para-quem reveal" style="background:var(--laranja);">
+  <div class="container">
+    <h2 class="section-title" style="color:#fff;">Este e-book es <span style="color:#1A1A1A;">para ti</span> si...</h2>
+    <div class="divider" style="background:rgba(255,255,255,0.4);"></div>
+    <div class="checkitems">
+      <div class="checkitem" style="background:rgba(255,255,255,0.15);color:#fff;"><div class="ck-icon" style="background:rgba(255,255,255,0.25);color:#fff;">✓</div>Quieres adelgazar sin sufrir con la dieta</div>
+      <div class="checkitem" style="background:rgba(255,255,255,0.15);color:#fff;"><div class="ck-icon" style="background:rgba(255,255,255,0.25);color:#fff;">✓</div>Buscas ganar masa muscular con alimentación correcta</div>
+      <div class="checkitem" style="background:rgba(255,255,255,0.15);color:#fff;"><div class="ck-icon" style="background:rgba(255,255,255,0.25);color:#fff;">✓</div>No tienes tiempo y necesitas recetas rápidas</div>
+      <div class="checkitem" style="background:rgba(255,255,255,0.15);color:#fff;"><div class="ck-icon" style="background:rgba(255,255,255,0.25);color:#fff;">✓</div>Quieres usar el Whey Protein más allá del batido</div>
+      <div class="checkitem" style="background:rgba(255,255,255,0.15);color:#fff;"><div class="ck-icon" style="background:rgba(255,255,255,0.25);color:#fff;">✓</div>Estás cansado de comer lo mismo todos los días</div>
+      <div class="checkitem" style="background:rgba(255,255,255,0.15);color:#fff;"><div class="ck-icon" style="background:rgba(255,255,255,0.25);color:#fff;">✓</div>Quieres alimentarte bien sin gastar demasiado</div>
+    </div>
+    <div style="text-align:center; margin-top:36px;">
+      <a href="#plan-basico" class="btn-cta btn-cta-green" style="background:linear-gradient(180deg,#3ecf6e 0%,#22a84b 48%,#1a8c3c 100%);color:#fff;box-shadow:0 1px 0 rgba(255,255,255,0.32) inset,0 -2px 0 rgba(0,0,0,0.18) inset,0 8px 28px rgba(34,168,75,0.45);">ADQUIRIR AHORA</a>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE RECEITAS -->
+<section class="receitas-section reveal">
+  <div class="container">
+    <h2 class="section-title">Algunas de las <span>recetas increíbles</span></h2>
+    <div class="divider"></div>
+    <p class="section-sub">¡Más de 200 opciones para desayuno, almuerzo, cena, meriendas y postres fit!</p>
+  </div>
+  <div class="marquee-wrap">
+    <div class="marquee-track" id="recMarquee">
+      <div class="receita-slide">
+        <!--<img src="https://raw.githubusercontent.com/SEU_USER/SEU_REPO/main/img/receta1.jpg" alt="Receta 1">-->
+        <div class="receita-num">01</div>
+        <div class="receita-label-ph">Pega el link<br>de la imagen</div>
+        <div class="receita-badge">Receta 1</div>
+      </div>
+      <div class="receita-slide">
+        <!--<img src="https://raw.githubusercontent.com/SEU_USER/SEU_REPO/main/img/receta2.jpg" alt="Receta 2">-->
+        <div class="receita-num">02</div>
+        <div class="receita-label-ph">Pega el link<br>de la imagen</div>
+        <div class="receita-badge">Receta 2</div>
+      </div>
+      <div class="receita-slide">
+        <!--<img src="https://raw.githubusercontent.com/SEU_USER/SEU_REPO/main/img/receta3.jpg" alt="Receta 3">-->
+        <div class="receita-num">03</div>
+        <div class="receita-label-ph">Pega el link<br>de la imagen</div>
+        <div class="receita-badge">Receta 3</div>
+      </div>
+      <div class="receita-slide">
+        <!--<img src="https://raw.githubusercontent.com/SEU_USER/SEU_REPO/main/img/receta4.jpg" alt="Receta 4">-->
+        <div class="receita-num">04</div>
+        <div class="receita-label-ph">Pega el link<br>de la imagen</div>
+        <div class="receita-badge">Receta 4</div>
+      </div>
+      <div class="receita-slide">
+        <!--<img src="https://raw.githubusercontent.com/SEU_USER/SEU_REPO/main/img/receta5.jpg" alt="Receta 5">-->
+        <div class="receita-num">05</div>
+        <div class="receita-label-ph">Pega el link<br>de la imagen</div>
+        <div class="receita-badge">Receta 5</div>
+      </div>
+      <div class="receita-slide">
+        <!--<img src="https://raw.githubusercontent.com/SEU_USER/SEU_REPO/main/img/receta6.jpg" alt="Receta 6">-->
+        <div class="receita-num">06</div>
+        <div class="receita-label-ph">Pega el link<br>de la imagen</div>
+        <div class="receita-badge">Receta 6</div>
+      </div>
+    </div>
+  </div>
+  <div style="text-align:center; margin-top:36px;">
+    <a href="#plan-basico" class="btn-cta">ADQUIRIR AHORA</a>
+  </div>
+</section>
+
+<!-- CARROSSEL BONUS -->
+<section class="bonus-section reveal" style="background:var(--laranja);">
+  <div class="container">
+    <h2 class="section-title" style="color:#fff;">Lo que vas a <span style="color:var(--amarelo);">recibir</span></h2>
+    <div class="divider" style="background:rgba(255,255,255,0.4);"></div>
+    <p class="section-sub" style="color:rgba(255,255,255,0.85);">Además de las 200 recetas, llevas estos bonos exclusivos sin costo adicional:</p>
+  </div>
+  <div class="marquee-wrap">
+    <div class="marquee-track" id="bonusMarquee">
+      <div class="bonus-card">
+        <div class="bonus-icon-wrap">
+          <!-- <img src="https://raw.githubusercontent.com/SEU_USER/SEU_REPO/main/img/bonus-principal.jpg" alt="Principal"> -->
+          <span>Bono Principal</span>
+        </div>
+        <span class="bonus-badge-tag">Principal</span>
+        <h3>200 Recetas Fit con Whey Protein</h3>
+        <p>El e-book completo con recetas para todas las comidas del día, del desayuno al postre.</p>
+      </div>
+      <div class="bonus-card">
+        <div class="bonus-icon-wrap">
+          <!-- <img src="https://raw.githubusercontent.com/SEU_USER/SEU_REPO/main/img/bonus1.jpg" alt="Bono 1"> -->
+          <span>Bono 1</span>
+        </div>
+        <span class="bonus-badge-tag">Bono 1</span>
+        <h3>Guía de Sustituciones Inteligentes</h3>
+        <p>Adapta cualquier receta sin perder sabor ni resultados en la dieta.</p>
+      </div>
+      <div class="bonus-card">
+        <div class="bonus-icon-wrap">
+          <!-- <img src="https://raw.githubusercontent.com/SEU_USER/SEU_REPO/main/img/bonus2.jpg" alt="Bono 2"> -->
+          <span>Bono 2</span>
+        </div>
+        <span class="bonus-badge-tag">Bono 2</span>
+        <h3>Menú Semanal Completo</h3>
+        <p>7 días de alimentación fit organizada para que la sigas sin dificultad.</p>
+      </div>
+      <div class="bonus-card">
+        <div class="bonus-icon-wrap">
+          <!-- <img src="https://raw.githubusercontent.com/SEU_USER/SEU_REPO/main/img/bonus3.jpg" alt="Bono 3"> -->
+          <span>Bono 3</span>
+        </div>
+        <span class="bonus-badge-tag">Bono 3</span>
+        <h3>Tabla de Macros del Whey</h3>
+        <p>Sabe exactamente cuánta proteína, carbohidratos y grasa tiene cada receta.</p>
+      </div>
+      <div class="bonus-card">
+        <div class="bonus-icon-wrap">
+          <!-- <img src="https://raw.githubusercontent.com/SEU_USER/SEU_REPO/main/img/bonus4.jpg" alt="Bono 4"> -->
+          <span>Bono 4</span>
+        </div>
+        <span class="bonus-badge-tag">Bono 4</span>
+        <h3>Lista de Compras Lista</h3>
+        <p>Ve al supermercado con todo organizado, ahorrando tiempo y dinero.</p>
+      </div>
+    </div>
+  </div>
+  <div class="carousel-dots" id="bonusDots"></div>
+</section>
+
+<!-- CARROSSEL DEPOIMENTOS -->
+<section class="depoimentos-section reveal">
+  <div class="container">
+    <h2 class="section-title">Lo que dicen nuestros <span>clientes</span></h2>
+    <div class="divider"></div>
+    <p class="section-sub">¡Más de 10.000 personas ya transformaron su alimentación con el e-book!</p>
+  </div>
+  <div class="carousel-outer">
+    <div class="carousel-track" id="depoTrack">
+
+      <div class="depo-card hi">
+        <div class="depo-img-slot">
+          <!-- <img src="https://raw.githubusercontent.com/SEU_USER/SEU_REPO/main/img/depo1.jpg" alt="Depoimento 1"> -->
+          <span>Foto / Screenshot</span>
+          <span style="font-size:9px;opacity:.6;font-weight:400;text-transform:none">depo1.jpg</span>
+        </div>
+        <div class="depo-body">
+          <div class="depo-quote">"</div>
+          <div class="depo-stars">★★★★★</div>
+          <p class="depo-text">Nunca pensé que podría comer de forma saludable y aún sentirme satisfecha. ¡Las recetas son increíbles, fáciles de hacer y quedan deliciosas!</p>
+          <div class="depo-autor">
+            <div class="depo-avatar">A</div>
+            <div><div class="depo-nome">Ana Claudia S.</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="depo-card">
+        <div class="depo-img-slot">
+          <!-- <img src="https://raw.githubusercontent.com/SEU_USER/SEU_REPO/main/img/depo-maria.jpg" alt="María G."> -->
+          <span>Foto / Screenshot</span>
+          <span style="font-size:9px;opacity:.6;font-weight:400;text-transform:none">depo-maria.jpg</span>
+        </div>
+        <div class="depo-body">
+          <div class="depo-quote">"</div>
+          <div class="depo-stars">★★★★★</div>
+          <p class="depo-text">Yo era de las que compraba proteína y la dejaba olvidada… siempre lo mismo, batido y ya. Con estas recetas empecé a hacer postres de verdad y ahora es la mejor parte de mi día. No parece dieta.</p>
+          <div class="depo-autor">
+            <div class="depo-avatar" style="background:linear-gradient(135deg,#f7971e,#ffd200)">M</div>
+            <div><div class="depo-nome">María G.</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="depo-card">
+        <div class="depo-img-slot">
+          <!-- <img src="https://raw.githubusercontent.com/SEU_USER/SEU_REPO/main/img/depo-lucia.jpg" alt="Lucía R."> -->
+          <span>Foto / Screenshot</span>
+          <span style="font-size:9px;opacity:.6;font-weight:400;text-transform:none">depo-lucia.jpg</span>
+        </div>
+        <div class="depo-body">
+          <div class="depo-quote">"</div>
+          <div class="depo-stars">★★★★★</div>
+          <p class="depo-text">No tengo tiempo para cocinar y pensé que esto iba a ser complicado… pero nada que ver. Las recetas son rápidas y fáciles, y los ingredientes son los que ya tengo en casa.</p>
+          <div class="depo-autor">
+            <div class="depo-avatar" style="background:linear-gradient(135deg,#43e97b,#38f9d7)">L</div>
+            <div><div class="depo-nome">Lucía R.</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="depo-card">
+        <div class="depo-img-slot">
+          <!-- <img src="https://raw.githubusercontent.com/SEU_USER/SEU_REPO/main/img/depo-sofia.jpg" alt="Sofía L."> -->
+          <span>Foto / Screenshot</span>
+          <span style="font-size:9px;opacity:.6;font-weight:400;text-transform:none">depo-sofia.jpg</span>
+        </div>
+        <div class="depo-body">
+          <div class="depo-quote">"</div>
+          <div class="depo-stars">★★★★★</div>
+          <p class="depo-text">Mi dieta antes era aburrida y siempre terminaba abandonando. Desde que empecé con estas recetas, todo cambió. Disfruto lo que como y ya no siento que estoy a dieta.</p>
+          <div class="depo-autor">
+            <div class="depo-avatar" style="background:linear-gradient(135deg,#a18cd1,#fbc2eb)">S</div>
+            <div><div class="depo-nome">Sofía L.</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="depo-card">
+        <div class="depo-img-slot">
+          <!-- <img src="https://raw.githubusercontent.com/SEU_USER/SEU_REPO/main/img/depo3.jpg" alt="Juliana P."> -->
+          <span>Foto / Screenshot</span>
+          <span style="font-size:9px;opacity:.6;font-weight:400;text-transform:none">depo3.jpg</span>
+        </div>
+        <div class="depo-body">
+          <div class="depo-quote">"</div>
+          <div class="depo-stars">★★★★★</div>
+          <p class="depo-text">Soy entrenadora personal e indico este e-book a todos mis alumnos. ¡La variedad de recetas es impresionante y los resultados son reales!</p>
+          <div class="depo-autor">
+            <div class="depo-avatar" style="background:linear-gradient(135deg,#f093fb,#f5576c)">J</div>
+            <div><div class="depo-nome">Juliana P.</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="depo-card">
+        <div class="depo-img-slot">
+          <!-- <img src="https://raw.githubusercontent.com/SEU_USER/SEU_REPO/main/img/depo4.jpg" alt="Depoimento 4"> -->
+          <span>Foto / Screenshot</span>
+          <span style="font-size:9px;opacity:.6;font-weight:400;text-transform:none">depo4.jpg</span>
+        </div>
+        <div class="depo-body">
+          <div class="depo-quote">"</div>
+          <div class="depo-stars">★★★★★</div>
+          <p class="depo-text">Toda mi familia adoptó las recetas. ¡Mis hijos ni se dan cuenta de que están comiendo fit! Excelente relación calidad-precio.</p>
+          <div class="depo-autor">
+            <div class="depo-avatar" style="background:linear-gradient(135deg,#4facfe,#00f2fe)">M</div>
+            <div><div class="depo-nome">Marcos F.</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="depo-card">
+        <div class="depo-img-slot">
+          <!-- <img src="https://raw.githubusercontent.com/SEU_USER/SEU_REPO/main/img/depo5.jpg" alt="Depoimento 5"> -->
+          <span>Foto / Screenshot</span>
+          <span style="font-size:9px;opacity:.6;font-weight:400;text-transform:none">depo5.jpg</span>
+        </div>
+        <div class="depo-body">
+          <div class="depo-quote">"</div>
+          <div class="depo-stars">★★★★★</div>
+          <p class="depo-text">Lo compré con miedo de que fuera más de lo mismo, pero me sorprendí. Recetas diferentes, con pasos simples e ingredientes fáciles de conseguir.</p>
+          <div class="depo-autor">
+            <div class="depo-avatar" style="background:linear-gradient(135deg,#fa709a,#fee140)">C</div>
+            <div><div class="depo-nome">Camila L.</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="depo-card">
+        <div class="depo-img-slot">
+          <!-- <img src="https://raw.githubusercontent.com/SEU_USER/SEU_REPO/main/img/depo6.jpg" alt="Depoimento 6"> -->
+          <span>Foto / Screenshot</span>
+          <span style="font-size:9px;opacity:.6;font-weight:400;text-transform:none">depo6.jpg</span>
+        </div>
+        <div class="depo-body">
+          <div class="depo-quote">"</div>
+          <div class="depo-stars">★★★★★</div>
+          <p class="depo-text">Gané 4 kg de masa muscular en 2 meses y aún consigo comer bien. La guía de macros fue un diferencial enorme en mi rutina.</p>
+          <div class="depo-autor">
+            <div class="depo-avatar" style="background:linear-gradient(135deg,#a18cd1,#fbc2eb)">T</div>
+            <div><div class="depo-nome">Thiago B.</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="depo-card">
+        <div class="depo-img-slot">
+          <!-- <img src="https://raw.githubusercontent.com/SEU_USER/SEU_REPO/main/img/depo7.jpg" alt="Depoimento 7"> -->
+          <span>Foto / Screenshot</span>
+          <span style="font-size:9px;opacity:.6;font-weight:400;text-transform:none">depo7.jpg</span>
+        </div>
+        <div class="depo-body">
+          <div class="depo-quote">"</div>
+          <div class="depo-stars">★★★★★</div>
+          <p class="depo-text">¡Llevaba años intentando comer sano y siempre lo dejaba! Con estas recetas por fin lo logré. Son tan ricas que ni parece dieta.</p>
+          <div class="depo-autor">
+            <div class="depo-avatar" style="background:linear-gradient(135deg,#f7971e,#ffd200)">L</div>
+            <div><div class="depo-nome">Laura V.</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="depo-card">
+        <div class="depo-img-slot">
+          <!-- <img src="https://raw.githubusercontent.com/SEU_USER/SEU_REPO/main/img/depo8.jpg" alt="Depoimento 8"> -->
+          <span>Foto / Screenshot</span>
+          <span style="font-size:9px;opacity:.6;font-weight:400;text-transform:none">depo8.jpg</span>
+        </div>
+        <div class="depo-body">
+          <div class="depo-quote">"</div>
+          <div class="depo-stars">★★★★★</div>
+          <p class="depo-text">El precio es increíble para la cantidad de contenido. Tengo el e-book hace 2 semanas y ya probé más de 15 recetas. ¡Todas espectaculares!</p>
+          <div class="depo-autor">
+            <div class="depo-avatar" style="background:linear-gradient(135deg,#11998e,#38ef7d)">D</div>
+            <div><div class="depo-nome">Diego S.</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="depo-card">
+        <div class="depo-img-slot">
+          <!-- <img src="https://raw.githubusercontent.com/SEU_USER/SEU_REPO/main/img/depo9.jpg" alt="Depoimento 9"> -->
+          <span>Foto / Screenshot</span>
+          <span style="font-size:9px;opacity:.6;font-weight:400;text-transform:none">depo9.jpg</span>
+        </div>
+        <div class="depo-body">
+          <div class="depo-quote">"</div>
+          <div class="depo-stars">★★★★★</div>
+          <p class="depo-text">Mi nutricionista se sorprendió con mis resultados. Le mostré el e-book y ahora ella también lo recomienda a sus pacientes.</p>
+          <div class="depo-autor">
+            <div class="depo-avatar" style="background:linear-gradient(135deg,#fc5c7d,#6a82fb)">P</div>
+            <div><div class="depo-nome">Patricia N.</div></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="carousel-dots" id="depoDots"></div>
+
+  <div style="text-align:center; margin-top:40px;">
+    <a href="#plan-basico" class="btn-cta">ADQUIRIR AHORA</a>
+  </div>
+</section>
+
+<!-- PRICING — DOIS CARDS -->
+<section class="preco-section reveal" id="comprar">
+  <div class="container">
+    <h2 class="section-title">¡Elige tu <span>plan</span> y empieza hoy!</h2>
+    <div class="divider" style="background:linear-gradient(90deg,var(--laranja),var(--amarelo))"></div>
+
+    <div class="pricing-grid" style="flex-direction:column; align-items:center;">
+
+      <!-- CARD $9 — DESTAQUE — PRIMEIRO -->
+      <div class="preco-box destaque" id="plan-basico" style="max-width:420px; width:100%;">
+        <div class="preco-popular-badge">⭐ MÁS POPULAR</div>
+        <div class="preco-desconto-tag">Oferta Especial</div>
+        <div class="preco-de">Antes $27,00</div>
+        <div class="preco-por">Por solo</div>
+        <div class="preco-valor">$9</div>
+        <div class="preco-parcelas">Pago único · Acceso inmediato</div>
+        <ul class="preco-lista">
+          <li>200 Recetas Fit con Whey Protein</li>
+          <li>Tabla de calorías y macros</li>
+          <li>Modo de preparación detallado con fotos</li>
+          <li>Soporte + Garantía 7 días</li>
+          <li>Acceso de por vida</li>
+          <li>+30 Recetas Inéditas para Air Fryer</li>
+          <li>+5 Postres Proteicos Internacionales</li>
+          <li>🎁 +35 Recetas Pre y Post Entrenamiento</li>
+          <li>🎁 +40 Recetas Saladas con Whey</li>
+          <li>🎁 Dulces Fit para Niños y Familia</li>
+        </ul>
+        <a href="SEU_LINK_HOTMART_AQUI" class="btn-cta btn-cta-green" style="width:100%; font-size:16px; padding:20px; justify-content:center;">
+          ADQUIRIR AHORA
+        </a>
+        <div class="seguro-info">🔒 Pago 100% seguro vía Hotmart</div>
+      </div>
+
+      <!-- CARD $5 — ABAIXO -->
+      <div class="preco-box" style="max-width:420px; width:100%;">
+        <div class="preco-desconto-tag">Acceso Básico</div>
+        <div class="preco-por">Por solo</div>
+        <div class="preco-valor">$5</div>
+        <div class="preco-parcelas">Pago único · Acceso inmediato</div>
+        <ul class="preco-lista">
+          <li>200 Recetas Fit con Whey Protein</li>
+          <li>Tabla de calorías y macros</li>
+          <li>Modo de preparación detallado con fotos</li>
+          <li>Soporte + Garantía 7 días</li>
+          <li>Acceso de por vida</li>
+        </ul>
+        <a href="SEU_LINK_AQUI" class="btn-cta" style="width:100%; font-size:15px; padding:18px; justify-content:center;">
+          ADQUIRIR AHORA
+        </a>
+        <div class="seguro-info">🔒 Pago 100% seguro</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section reveal">
+  <div class="container">
+    <h2 class="section-title">Preguntas <span>Frecuentes</span></h2>
+    <div class="divider"></div>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-q">
+          ¿Cómo recibo el acceso?
+          <span class="faq-chev">▾</span>
+        </button>
+        <div class="faq-ans">En cuanto se confirma el pago, recibes el enlace en tu correo al instante. Todo es digital, acceso inmediato, sin esperar ningún envío físico.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          ¿Necesito saber cocinar?
+          <span class="faq-chev">▾</span>
+        </button>
+        <div class="faq-ans">No. Las recetas fueron creadas para quienes nunca han cocinado. Cada una tiene modo de preparación detallado con fotos reales. Si sabes usar un microondas, ya puedes hacer la mayoría.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          ¿Es apto para diabéticos?
+          <span class="faq-chev">▾</span>
+        </button>
+        <div class="faq-ans">Sí. Hay varias opciones con edulcorante natural y cero azúcar, todas identificadas en el e-book. Recomendamos siempre consultar a tu médico para adaptaciones específicas.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          ¿Puedo usar cualquier whey?
+          <span class="faq-chev">▾</span>
+        </button>
+        <div class="faq-ans">Sí. Las recetas funcionan con whey concentrado, aislado o hidrolizado, de cualquier sabor. Cada receta indica variaciones con lo que ya tengas en casa.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section style="background:linear-gradient(135deg,#FF6B00,#FFB800); text-align:center; padding:64px 20px;">
+  <div class="container">
+    <h2 style="color:#fff; font-size:clamp(24px,4.5vw,40px); font-weight:900; margin-bottom:14px; line-height:1.2;">
+      ¡No pierdas más tiempo con dietas aburridas!
+    </h2>
+    <p style="color:rgba(255,255,255,0.88); font-size:17px; margin-bottom:34px; max-width:520px; margin-left:auto; margin-right:auto; line-height:1.65;">
+      Únete a más de 10.000 personas que ya están comiendo bien, viendo resultados y sin sufrimiento.
+    </p>
+    <a href="#plan-basico" class="btn-cta" style="background:linear-gradient(180deg,#fff 0%,#f0f0f0 100%); color:var(--laranja); box-shadow:0 8px 32px rgba(0,0,0,0.22);">
+      ADQUIRIR AHORA
+    </a>
+    <p style="color:rgba(255,255,255,0.65); margin-top:14px; font-size:13px;">🔒 Garantía de 7 días • Acceso inmediato</p>
+  </div>
+</section>
+
+<footer>
+  <p><strong>200 Recetas Fit con Whey Protein</strong></p>
+  <p style="margin-top:8px;">
+    <a href="#">Política de Privacidad</a> &nbsp;|&nbsp;
+    <a href="#">Términos de Uso</a> &nbsp;|&nbsp;
+    <a href="#">Contacto</a>
+  </p>
+  <p style="margin-top:12px;">© 2025 Recetas con Whey. Todos los derechos reservados.</p>
+  <p style="margin-top:8px; font-size:12px; color:#555;">Este producto se distribuye vía Hotmart. Los resultados pueden variar de persona a persona.</p>
+</footer>
+
+<script>
+document.querySelectorAll('.faq-item').forEach(function(item) {
+  item.querySelector('.faq-q').addEventListener('click', function() {
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(i) {
+      i.classList.remove('open');
+      i.querySelector('.faq-ans').style.maxHeight = null;
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      item.querySelector('.faq-ans').style.maxHeight = item.querySelector('.faq-ans').scrollHeight + 'px';
+    }
+  });
+});
+
+function initCarousel({ trackId, dotsId, perView, autoInterval = 3500 }) {
+  const track = document.getElementById(trackId);
+  const dotsWrap = document.getElementById(dotsId);
+  if (!track || !dotsWrap) return;
+
+  const slides = Array.from(track.children);
+  const total = slides.length;
+  let cur = 0, timer;
+
+  const pages = Math.ceil(total / perView);
+  for (let i = 0; i < pages; i++) {
+    const d = document.createElement('div');
+    d.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+    d.addEventListener('click', () => goTo(i * perView));
+    dotsWrap.appendChild(d);
+  }
+
+  function slideW() {
+    const gap = parseInt(window.getComputedStyle(track).gap) || 20;
+    return slides[0].offsetWidth + gap;
+  }
+
+  function updateDots() {
+    const page = Math.min(Math.floor(cur / perView), pages - 1);
+    dotsWrap.querySelectorAll('.carousel-dot').forEach((d, i) => d.classList.toggle('active', i === page));
+  }
+
+  function goTo(idx) {
+    const max = total - perView;
+    cur = Math.max(0, Math.min(idx, max));
+    track.style.transform = `translateX(-${cur * slideW()}px)`;
+    updateDots();
+  }
+
+  function next() {
+    const nxt = cur + perView;
+    goTo(nxt >= total ? 0 : nxt);
+  }
+
+  function startAuto() { timer = setInterval(next, autoInterval); }
+  function stopAuto()  { clearInterval(timer); }
+
+  startAuto();
+  track.parentElement.addEventListener('mouseenter', stopAuto);
+  track.parentElement.addEventListener('mouseleave', startAuto);
+
+  let tx = 0;
+  track.addEventListener('touchstart', e => { tx = e.touches[0].clientX; stopAuto(); }, { passive: true });
+  track.addEventListener('touchend', e => {
+    const diff = tx - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) diff > 0 ? next() : goTo(cur - perView);
+    startAuto();
+  });
+
+  window.addEventListener('resize', () => goTo(cur));
+}
+
+const isMob = () => window.innerWidth <= 580;
+initCarousel({ trackId: 'depoTrack', dotsId: 'depoDots', perView: isMob() ? 1 : 2, autoInterval: 4200 });
+
+/* ── MARQUEE INFINITO — duplica itens para loop perfeito ── */
+['recMarquee', 'bonusMarquee'].forEach(id => {
+  const track = document.getElementById(id);
+  if (!track) return;
+  const clone = track.innerHTML;
+  track.innerHTML = clone + clone; // duplica para o loop ser seamless
+});
+
+
+
+
+</body>
+</html>
