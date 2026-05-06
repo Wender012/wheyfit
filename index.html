@@ -1,1080 +1,487 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>200 Recetas Fit con Whey Protein | El E-book Original</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Lato:wght@400;700&display=swap" rel="stylesheet">
-<script>
-  window.pixelId = "69a22a4b27e9a968d751df3d";
-  var a = document.createElement("script");
-  a.setAttribute("async", "");
-  a.setAttribute("defer", "");
-  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
-  document.head.appendChild(a);
-</script>
-<script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-subids async defer></script>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<meta name="theme-color" content="#1a3fbf">
+<title>Oferta Fácil — Adaptativo</title>
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600&display=swap');
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+:root{--vm:#D00000;--vm2:#8B0000;--am:#FFD700;--azul:#1E3FBF;--bg:#e8eaf0;--borda:#dde0e8;--txt:#1a1a1a;--cinza:#6b7280;--safe-b:env(safe-area-inset-bottom,0px)}
+html,body{overscroll-behavior:none}
+body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--txt);height:100vh;height:100dvh;overflow:hidden}
 
-  :root {
-    --laranja: #FF6B00;
-    --laranja-claro: #FF8C33;
-    --laranja-escuro: #E05A00;
-    --amarelo: #FFB800;
-    --branco: #FFFFFF;
-    --cinza-claro: #F7F7F7;
-    --cinza-medio: #EEEEEE;
-    --cinza-texto: #555555;
-    --preto: #1A1A1A;
-  }
+header{background:linear-gradient(135deg,#1a3fbf,#0f2a8a);color:#fff;height:52px;padding:0 14px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200;box-shadow:0 3px 14px rgba(15,42,138,.45)}
+header h1{font-family:"Bebas Neue",sans-serif;font-size:20px;letter-spacing:1.5px;display:flex;align-items:center;gap:6px}
+header h1 em{background:var(--am);color:#0f2a8a;padding:2px 6px;border-radius:4px;font-style:normal;font-size:10px;font-family:"Barlow Condensed",sans-serif;font-weight:900;letter-spacing:1px}
 
-  body {
-    font-family: 'Lato', sans-serif;
-    background: var(--branco);
-    color: var(--preto);
-    overflow-x: hidden;
-  }
+.btn{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:13px;border:none;padding:10px 14px;border-radius:8px;cursor:pointer;display:inline-flex;align-items:center;gap:5px;touch-action:manipulation}
+.btn-vm{background:var(--vm);color:#fff}
+.btn-azul{background:#1a3fbf;color:#fff}
+.btn-print{background:#16a34a;color:#fff}
+.btn-outline{background:#fff;color:#1a3fbf;border:2px solid #1a3fbf}
+.btn-sm{padding:7px 11px;font-size:12px}
+.btn-block{width:100%;justify-content:center;padding:12px}
+.btn-ico{width:38px;height:38px;padding:0;justify-content:center;font-size:16px}
 
-  h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; }
+.app{display:grid;grid-template-columns:380px 1fr;height:calc(100dvh - 52px)}
+.painel{overflow-y:auto;background:#fff;border-right:1px solid var(--borda);-webkit-overflow-scrolling:touch}
+.secao{border-bottom:1px solid var(--borda);padding:13px 15px}
+.s-titulo{font-family:"Barlow Condensed",sans-serif;font-weight:800;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#94a3b8;margin-bottom:10px;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.badge{background:#1a3fbf;color:#fff;font-size:9px;font-weight:900;padding:2px 6px;border-radius:8px;font-family:"Barlow Condensed",sans-serif}
+.campo{margin-bottom:8px}
+.campo label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--cinza);display:block;margin-bottom:3px}
+.campo input,.campo select{width:100%;padding:11px 12px;border:2px solid var(--borda);border-radius:8px;font-family:"Barlow",sans-serif;font-size:15px;background:#fafafa;color:var(--txt)}
+.campo input:focus,.campo select:focus{outline:none;border-color:#1a3fbf;background:#fff}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 
-  /* ── FADE-IN CSS PURO — sem JS, sem bug ── */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(16px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
+.fmt-list{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.fmt-btn{cursor:pointer;border:2.5px solid var(--borda);border-radius:8px;padding:6px 4px;text-align:center;background:#fff;font-family:"Barlow Condensed",sans-serif}
+.fmt-btn.sel{border-color:#FFD700;background:#fffbea}
+.fmt-icon{width:100%;aspect-ratio:210/297;background:#1a3fbf;border-radius:3px;display:grid;gap:2px;padding:3px;margin-bottom:4px}
+.fmt-icon>div{background:#fff;border-radius:1px}
+.fmt-lbl{font-weight:800;font-size:11px}
+.fmt-sub{font-size:9px;color:#888;font-weight:600}
 
-  /* hero — stagger rápido */
-  .hero-tag        { animation: fadeUp 0.32s 0.06s ease both; }
-  .hero h1         { animation: fadeUp 0.32s 0.13s ease both; }
-  .hero-sub        { animation: fadeUp 0.32s 0.19s ease both; }
-  .hero-mockup-wrap{ animation: fadeUp 0.32s 0.24s ease both; }
-  .hero .btn-cta   { animation: fadeUp 0.32s 0.29s ease both; }
-  .hero p[style]   { animation: fadeUp 0.32s 0.33s ease both; }
+.upload-box{border:2px dashed var(--borda);border-radius:8px;padding:14px;text-align:center;cursor:pointer;background:#fafafa}
+.upload-box input{display:none}
+.upload-box span{font-family:"Barlow Condensed",sans-serif;font-size:12px;color:#555;font-weight:700}
 
-  /* seções — fade simples ao carregar */
-  .reveal { animation: fadeUp 0.38s 0.08s ease both; }
+.galeria{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;max-height:220px;overflow-y:auto;background:#f7f8fc;border-radius:8px;padding:7px;border:1px solid var(--borda)}
+.gal-item{position:relative;border:2px solid transparent;border-radius:6px;overflow:hidden;cursor:pointer;background:#fff;aspect-ratio:1}
+.gal-item.sel{border-color:var(--am)}
+.gal-item img{width:100%;height:100%;object-fit:contain;padding:4px}
+.gal-nome{position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,.7);color:#fff;font-size:8px;font-weight:700;padding:2px 4px;text-align:center;font-family:"Barlow Condensed",sans-serif}
+.gal-del{position:absolute;top:2px;right:2px;background:var(--vm);color:#fff;border:none;width:22px;height:22px;border-radius:50%;font-size:11px;cursor:pointer;font-weight:900}
 
-  /* ── MOBILE COMPLETO ── */
-  @media (max-width: 768px) {
-    section { padding: 44px 16px; }
+.of-lista{display:flex;flex-direction:column;gap:5px;max-height:240px;overflow-y:auto}
+.of-card{display:flex;align-items:center;gap:8px;padding:8px 10px;border:1.5px solid var(--borda);border-radius:8px;cursor:pointer;background:#fafafa}
+.of-card.assigned{border-color:#16a34a;background:#ecfdf5}
+.of-card img{width:40px;height:40px;object-fit:contain;border:1px solid var(--borda);border-radius:4px;background:#fff}
+.of-info{flex:1;min-width:0}
+.of-nome{font-family:"Barlow Condensed",sans-serif;font-weight:800;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.of-preco{font-size:12px;color:var(--vm);font-weight:700}
+.of-slot{font-size:10px;background:#16a34a;color:#fff;padding:3px 6px;border-radius:4px;font-weight:900}
 
-    .hero { padding: 40px 16px 40px; }
-    .hero h1 { font-size: clamp(24px, 7.5vw, 36px); line-height: 1.18; }
-    .hero-sub { font-size: 14.5px; margin-bottom: 24px; }
-    .hero-mockup-wrap { max-width: 200px; }
+.modal-bg{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:300;display:none;align-items:center;justify-content:center;padding:16px}
+.modal-bg.open{display:flex}
+.modal{background:#fff;border-radius:12px;padding:18px;width:100%;max-width:420px;max-height:85vh;overflow-y:auto}
+.modal h3{font-family:"Barlow Condensed",sans-serif;font-weight:800;font-size:17px;margin-bottom:12px;display:flex;justify-content:space-between}
+.modal-close{background:none;border:none;font-size:22px;color:#999;cursor:pointer}
 
-    .btn-cta { font-size: 14px !important; padding: 16px 24px !important; width: 100%; max-width: 360px; }
+.preview{background:#c8cad4;display:flex;flex-direction:column;align-items:center;padding:16px;gap:10px;overflow-y:auto}
+.p-tools{display:flex;gap:6px;align-items:center;flex-wrap:wrap;justify-content:center}
+.p-hint{font-size:10px;color:#666;font-family:"Barlow Condensed",sans-serif}
+.a4{width:min(480px,100%);aspect-ratio:210/297;background:#fff;box-shadow:0 8px 36px rgba(0,0,0,.38);position:relative;overflow:hidden;display:grid}
+.a4.g1{grid-template:1fr/1fr}
+.a4.g2{grid-template:1fr 1fr/1fr}
+.a4.g4{grid-template:1fr 1fr/1fr 1fr}
+.a4.g6{grid-template:1fr 1fr 1fr/1fr 1fr}
 
-    .checkitems { grid-template-columns: 1fr; gap: 10px; }
-    .checkitem { font-size: 14px; padding: 14px 16px; }
+.cel{position:relative;background:#fff;border:1px dashed rgba(0,0,0,.15);overflow:hidden;display:flex;flex-direction:column;cursor:pointer}
+.cel.empty::after{content:'+ Toque p/ atribuir';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#bbb;font-family:"Barlow Condensed",sans-serif;font-size:11px;font-weight:700;padding:6px;text-align:center}
+.cel.sel{box-shadow:inset 0 0 0 3px #FFD700}
+.cel-img{flex:1;display:flex;align-items:center;justify-content:center;padding:6%;min-height:0}
+.cel-img img{max-width:100%;max-height:100%;object-fit:contain;filter:drop-shadow(0 2px 4px rgba(0,0,0,.2))}
+.cel-faixa{background:var(--vm);color:#fff;padding:4% 5%;display:flex;align-items:center;justify-content:space-between;gap:4%;min-height:28%}
+.cel-nome{font-family:"Bebas Neue",sans-serif;line-height:1;flex:1;word-break:break-word;overflow:hidden}
+.cel-preco{font-family:"Bebas Neue",sans-serif;display:flex;align-items:baseline;line-height:1;white-space:nowrap}
 
-    .carousel-outer { padding: 4px 0 10px; }
-    .carousel-dot { width: 7px; height: 7px; }
-    .carousel-dot.active { width: 20px; }
-    .receita-slide { min-width: calc(60% - 10px); }
-    .bonus-card    { min-width: calc(84% - 10px); padding: 22px 18px; }
-    .bonus-card h3 { font-size: 13px; }
-    .depo-card     { min-width: 88%; padding: 22px 18px; }
-    .depo-text     { font-size: 13px; }
+.a4.g1 .enc-logo-box{position:absolute;top:3.5%;right:3%;width:28%;height:14%;display:flex;align-items:center;justify-content:center;z-index:10}
+.a4.g1 .enc-logo-box img{max-width:100%;max-height:100%;object-fit:contain}
+.a4.g1 .enc-logo-box span{font-family:"Bebas Neue",sans-serif;color:#fff;text-shadow:0 2px 4px rgba(0,0,0,.5);letter-spacing:1px}
+.a4.g1 .enc-prod-box{position:absolute;top:30%;left:4%;right:4%;height:39%;display:flex;align-items:center;justify-content:center;z-index:10}
+.a4.g1 .enc-prod-box img{max-width:100%;max-height:100%;object-fit:contain;filter:drop-shadow(0 6px 14px rgba(0,0,0,.35))}
+.a4.g1 .enc-faixa{position:absolute;bottom:0;left:0;right:0;height:27%;display:flex;align-items:center;padding:0 4% 0 5%;z-index:10}
+.a4.g1 .enc-fn{flex:0 0 44%;padding-right:3%}
+.a4.g1 .enc-fn-nome{font-family:"Bebas Neue",sans-serif;line-height:1.02;letter-spacing:.5px}
+.a4.g1 .enc-fp{flex:1;display:flex;align-items:baseline;justify-content:flex-end}
+.a4.g1 .enc-rs,.a4.g1 .enc-val,.a4.g1 .enc-cent{font-family:"Bebas Neue",sans-serif}
+.a4.g1 .enc-rs{align-self:flex-start;margin-top:3px}
+.a4.g1 .enc-val{line-height:.88}
+.a4.g1 .enc-dir{display:flex;flex-direction:column;margin-left:2px}
+.a4.g1 .enc-un{font-family:"Bebas Neue",sans-serif;background:rgba(0,0,0,.22);padding:1px 5px;border-radius:3px;margin-top:2px}
 
-    .garantia-box { padding: 28px 18px; }
-    .garantia-box h2 { font-size: 22px; }
-    .g-icon { font-size: 48px !important; }
+.mob-toolbar{display:none;position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--borda);z-index:150;box-shadow:0 -4px 14px rgba(0,0,0,.08);padding-bottom:var(--safe-b);grid-template-columns:repeat(5,1fr);height:calc(60px + var(--safe-b))}
+.mob-tab{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;border:none;background:none;font-family:"Barlow Condensed",sans-serif;font-size:10px;font-weight:800;color:#666;cursor:pointer}
+.mob-tab span{font-size:20px}
+.mob-tab.sel{color:var(--azul)}
 
-    .pricing-grid { gap: 32px; flex-direction: column !important; align-items: center; }
-    .preco-box { padding: 28px 18px; width: 100% !important; max-width: 100% !important; }
-    .preco-box.destaque { transform: scale(1) !important; }
-    .preco-popular-badge { font-size: 10px; padding: 4px 14px; }
-    .preco-valor { font-size: clamp(48px, 16vw, 64px); }
-    .preco-lista li { font-size: 13px; }
+/* ═══ ADAPTAÇÃO MOBILE ═══ */
+@media (max-width:840px){
+  .app{grid-template-columns:1fr;grid-template-rows:1fr;height:calc(100dvh - 52px - 60px - var(--safe-b))}
+  .painel{position:fixed;top:52px;bottom:calc(60px + var(--safe-b));left:0;right:0;z-index:140;transform:translateX(-100%);transition:transform .28s ease;border-right:none}
+  .painel.open{transform:translateX(0)}
+  .preview{padding:10px}
+  .a4{width:min(100%,calc((100dvh - 180px) * 210/297))}
+  .mob-toolbar{display:grid}
+  .fmt-list{grid-template-columns:repeat(2,1fr)}
+  .galeria{grid-template-columns:repeat(4,1fr);max-height:none}
+  .of-lista{max-height:none}
+  header h1{font-size:17px}
+  header h1 em{display:none}
+  .secao{display:none}
+  .secao.active{display:block}
+}
+@media (min-width:841px){
+  .mob-toolbar{display:none!important}
+  .secao{display:block!important}
+  .painel{transform:none!important}
+}
 
-    .faq-q { font-size: 13px; padding: 16px 16px; }
-    .faq-ans { font-size: 13px; }
-
-    .section-title { font-size: clamp(20px, 6vw, 28px); }
-    .section-sub { font-size: 14px; margin-bottom: 28px; }
-    .divider { margin-bottom: 20px; }
-  }
-
-  @media (max-width: 420px) {
-    .hero h1 { font-size: 22px; }
-    .receita-slide { min-width: calc(78% - 10px); }
-    .bonus-card    { min-width: 90%; }
-    .depo-card     { min-width: 94%; }
-    .btn-cta { font-size: 13px !important; }
-  }
-
-  .hero {
-    background: #ffffff;
-    padding: 60px 20px 56px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .hero-tag {
-    display: inline-block;
-    background: var(--laranja);
-    color: #fff;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 11px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    padding: 6px 18px;
-    border-radius: 100px;
-    margin-bottom: 22px;
-  }
-  .hero h1 {
-    font-size: clamp(28px, 6vw, 52px);
-    font-weight: 900;
-    line-height: 1.13;
-    color: var(--preto);
-    max-width: 780px;
-    margin: 0 auto 16px;
-  }
-  .hero h1 span { color: var(--laranja); }
-  .hero-sub {
-    font-size: clamp(15px, 2.5vw, 19px);
-    color: var(--cinza-texto);
-    max-width: 600px;
-    margin: 0 auto 32px;
-    line-height: 1.65;
-  }
-  .hero-mockup-wrap {
-    max-width: 620px;
-    width: 100%;
-    margin: 0 auto 36px;
-  }
-  .hero-mockup-wrap img {
-    width: 100%;
-    border-radius: 20px;
-    box-shadow: 0 24px 64px rgba(255,107,0,0.18);
-    display: block;
-  }
-  .hero-img-placeholder {
-    width: 100%;
-    aspect-ratio: 3/4;
-    border-radius: 18px;
-    box-shadow: 0 24px 64px rgba(255,107,0,0.18);
-    background: linear-gradient(145deg, #ffe0b2, #ffcc80);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 10px;
-    color: var(--laranja-escuro);
-    font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 20px;
-  }
-  .hero-img-placeholder .icon-ph { font-size: 40px; opacity: .5; margin-bottom: 4px; }
-  .hero-img-placeholder small { font-size: 10px; font-weight: 400; opacity: .6; text-transform: none; letter-spacing: 0; }
-
-  /* ── CTA iOS/APPLE ── */
-  .btn-cta {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    background: linear-gradient(180deg, var(--laranja-claro) 0%, var(--laranja) 48%, var(--laranja-escuro) 100%);
-    color: #fff;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
-    font-size: clamp(14px, 2.2vw, 17px);
-    padding: 18px 40px;
-    border-radius: 100px;
-    border: none;
-    cursor: pointer;
-    text-decoration: none;
-    box-shadow:
-      0 1px 0 rgba(255,255,255,0.32) inset,
-      0 -2px 0 rgba(0,0,0,0.18) inset,
-      0 8px 28px rgba(255,107,0,0.38),
-      0 2px 6px rgba(0,0,0,0.14);
-    transition: transform 0.18s ease, box-shadow 0.18s ease;
-    position: relative;
-    overflow: hidden;
-    letter-spacing: 0.4px;
-    text-transform: uppercase;
-  }
-  .btn-cta::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 50%;
-    background: linear-gradient(180deg, rgba(255,255,255,0.2) 0%, transparent 100%);
-    border-radius: 100px 100px 0 0;
-    pointer-events: none;
-  }
-  .btn-cta:hover {
-    transform: translateY(-2px) scale(1.022);
-    box-shadow:
-      0 1px 0 rgba(255,255,255,0.32) inset,
-      0 -2px 0 rgba(0,0,0,0.18) inset,
-      0 14px 40px rgba(255,107,0,0.48),
-      0 4px 12px rgba(0,0,0,0.18);
-  }
-  .btn-cta:active { transform: translateY(1px) scale(0.99); }
-  .btn-cta-green {
-    background: linear-gradient(180deg, #3ecf6e 0%, #22a84b 48%, #1a8c3c 100%);
-    box-shadow:
-      0 1px 0 rgba(255,255,255,0.32) inset,
-      0 -2px 0 rgba(0,0,0,0.18) inset,
-      0 8px 28px rgba(34,168,75,0.38),
-      0 2px 6px rgba(0,0,0,0.14);
-  }
-  .btn-cta-green:hover {
-    box-shadow:
-      0 1px 0 rgba(255,255,255,0.32) inset,
-      0 -2px 0 rgba(0,0,0,0.18) inset,
-      0 14px 40px rgba(34,168,75,0.48),
-      0 4px 12px rgba(0,0,0,0.18);
-  }
-  .btn-pulse { animation: pulse 2.4s ease-in-out infinite; }
-  @keyframes pulse {
-    0%, 100% { box-shadow: 0 1px 0 rgba(255,255,255,0.32) inset, 0 -2px 0 rgba(0,0,0,0.18) inset, 0 8px 28px rgba(255,107,0,0.38); }
-    50% { box-shadow: 0 1px 0 rgba(255,255,255,0.32) inset, 0 -2px 0 rgba(0,0,0,0.18) inset, 0 18px 48px rgba(255,107,0,0.58); transform: translateY(-2px); }
-  }
-
-  section { padding: 64px 20px; }
-  .container { max-width: 900px; margin: 0 auto; }
-  .section-title {
-    font-size: clamp(22px, 4vw, 36px);
-    font-weight: 900;
-    text-align: center;
-    margin-bottom: 10px;
-    color: var(--preto);
-    line-height: 1.2;
-  }
-  .section-title span { color: var(--laranja); }
-  .section-sub {
-    text-align: center;
-    color: var(--cinza-texto);
-    font-size: 15.5px;
-    max-width: 580px;
-    margin: 0 auto 44px;
-    line-height: 1.65;
-  }
-  .divider {
-    width: 52px; height: 4px;
-    background: linear-gradient(90deg, var(--laranja), var(--amarelo));
-    border-radius: 4px;
-    margin: 10px auto 28px;
-  }
-
-  /* PARA QUEM */
-  .para-quem { background: var(--cinza-claro); }
-  .checkitems {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
-    max-width: 700px;
-    margin: 0 auto;
-  }
-  @media(max-width:520px) { .checkitems { grid-template-columns: 1fr; } }
-  .checkitem {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    background: #fff;
-    border-radius: 14px;
-    padding: 16px 18px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    font-size: 14.5px;
-    color: var(--cinza-texto);
-    font-weight: 600;
-    line-height: 1.4;
-  }
-  .checkitem .ck-icon {
-    width: 28px; height: 28px; min-width: 28px;
-    background: linear-gradient(135deg, var(--laranja-claro), var(--laranja));
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    color: #fff; font-size: 14px;
-    box-shadow: 0 2px 8px rgba(255,107,0,0.22);
-    margin-top: 1px;
-  }
-
-
-  /* ── MARQUEE INFINITO ── */
-  @keyframes marqueeScroll {
-    0%   { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
-  .marquee-wrap {
-    overflow: hidden;
-    width: 100%;
-    padding: 8px 0 16px;
-  }
-  .marquee-track {
-    display: flex;
-    gap: 20px;
-    width: max-content;
-    animation: marqueeScroll 24s linear infinite;
-  }
-  #depoMarquee   { animation-duration: 40s; }
-  #bonusMarquee  { animation-duration: 28s; }
-  .marquee-track:hover { animation-play-state: paused; }
-  .marquee-track .receita-slide { min-width: 220px; width: 220px; flex-shrink: 0; }
-  .marquee-track .bonus-card    { min-width: 260px; width: 260px; flex-shrink: 0; }
-  .marquee-track .depo-card     { min-width: 340px; width: 340px; flex-shrink: 0; }
-  @media (max-width: 768px) {
-    .marquee-track .receita-slide { min-width: 160px; width: 160px; }
-    .marquee-track .bonus-card    { min-width: 220px; width: 220px; }
-    .marquee-track .depo-card     { min-width: 280px; width: 280px; }
-  }
-
-  /* CAROUSEL (dots apenas) */
-  .carousel-dots {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    margin-top: 20px;
-  }
-  .carousel-dot {
-    width: 8px; height: 8px;
-    border-radius: 50%;
-    background: #ddd;
-    cursor: pointer;
-    transition: all 0.35s;
-  }
-  .carousel-dot.active {
-    width: 24px;
-    border-radius: 4px;
-    background: var(--laranja);
-  }
-
-
-  .receitas-section { background: #fff; }
-  .receita-slide {
-    min-width: calc(33.333% - 14px);
-    border-radius: 18px;
-    overflow: hidden;
-    background: var(--cinza-medio);
-    aspect-ratio: 1/1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 6px;
-    position: relative;
-    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
-    transition: transform 0.2s;
-    cursor: pointer;
-  }
-  .receita-slide:hover { transform: scale(1.03); }
-  .receita-slide img {
-    position: absolute; inset: 0;
-    width: 100%; height: 100%;
-    object-fit: cover;
-    border-radius: 18px;
-  }
-  .receita-num { font-family: 'Montserrat', sans-serif; font-size: 32px; font-weight: 900; color: #ccc; }
-  .receita-label-ph {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 10px; font-weight: 700; color: #bbb;
-    text-transform: uppercase; letter-spacing: 1px;
-    text-align: center; padding: 0 10px; line-height: 1.4;
-  }
-  .receita-badge {
-    position: absolute;
-    bottom: 10px; left: 50%;
-    transform: translateX(-50%);
-    background: rgba(255,107,0,0.85);
-    color: #fff;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 9px; font-weight: 700; letter-spacing: 1px;
-    text-transform: uppercase; padding: 4px 12px;
-    border-radius: 100px; white-space: nowrap;
-  }
-  @media(max-width:580px) { .receita-slide { min-width: calc(50% - 10px); } }
-
-  /* BONUS */
-  .bonus-section { background: var(--cinza-claro); }
-  .bonus-card {
-    min-width: calc(33.333% - 14px);
-    background: #fff;
-    border-radius: 20px;
-    padding: 28px 22px;
-    box-shadow: 0 4px 18px rgba(0,0,0,0.06);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 10px;
-    border: 2px solid transparent;
-    transition: border-color 0.3s, transform 0.2s;
-  }
-  .bonus-card:hover { border-color: var(--laranja); transform: translateY(-3px); }
-  .bonus-icon-wrap {
-    width: 100%;
-    aspect-ratio: 16/9;
-    border-radius: 14px;
-    overflow: hidden;
-    background: var(--cinza-medio);
-    display: flex; align-items: center; justify-content: center;
-    flex-direction: column;
-    gap: 6px;
-    color: #bbb;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 10px; font-weight: 700;
-    letter-spacing: 1px; text-transform: uppercase;
-    text-align: center;
-    padding: 10px;
-    position: relative;
-  }
-  .bonus-icon-wrap img {
-    position: absolute; inset: 0;
-    width: 100%; height: 100%;
-    object-fit: cover;
-    border-radius: 14px;
-  }
-  .bonus-card h3 { font-size: 14px; font-weight: 800; color: var(--preto); line-height: 1.35; }
-  .bonus-card p { font-size: 13px; color: var(--cinza-texto); line-height: 1.55; }
-  .bonus-badge-tag {
-    background: var(--laranja); color: #fff;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 10px; font-weight: 700; letter-spacing: 1px;
-    text-transform: uppercase; padding: 4px 12px; border-radius: 100px;
-  }
-  @media(max-width:580px) { .bonus-card { min-width: calc(80% - 10px); } }
-
-  /* DEPOIMENTOS */
-  .depoimentos-section { background: #fff; }
-  .depo-card {
-    flex-shrink: 0;
-    background: var(--cinza-claro);
-    border-radius: 20px;
-    padding: 0;
-    box-shadow: 0 2px 14px rgba(0,0,0,0.05);
-    border: 2px solid transparent;
-    position: relative;
-    overflow: hidden;
-    transition: border-color 0.35s;
-  }
-  .depo-card.hi { border-color: rgba(255,107,0,0.18); }
-
-  .marquee-track .depo-card {
-    min-width: 340px;
-    width: 340px;
-  }
-
-  @media(max-width:580px) {
-    .marquee-track .depo-card { min-width: 280px; width: 280px; }
-  }
-  .depo-img-slot {
-    width: 100%;
-    aspect-ratio: 4/3;
-    background: var(--cinza-medio);
-    display: flex; align-items: center; justify-content: center;
-    flex-direction: column; gap: 6px;
-    color: #bbb;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 10px; font-weight: 700;
-    letter-spacing: 1px; text-transform: uppercase;
-    text-align: center; padding: 10px;
-    position: relative;
-  }
-  .depo-img-slot img {
-    position: absolute; inset: 0;
-    width: 100%; height: 100%;
-    object-fit: cover;
-  }
-
-  .depo-body {
-    padding: 22px 24px 24px;
-  }
-
-  .depo-quote {
-    position: absolute; top: 14px; right: 20px;
-    font-size: 52px; color: rgba(255,107,0,0.09);
-    font-family: Georgia, serif; line-height: 1;
-    z-index: 1;
-  }
-  .depo-stars { color: var(--laranja); font-size: 15px; letter-spacing: 2px; margin-bottom: 10px; }
-  .depo-text { font-size: 14px; color: var(--cinza-texto); line-height: 1.65; margin-bottom: 18px; font-style: italic; }
-  .depo-autor { display: flex; align-items: center; gap: 12px; }
-  .depo-avatar {
-    width: 42px; height: 42px; min-width: 42px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--laranja-claro), var(--amarelo));
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800; font-size: 17px; color: #fff;
-  }
-  .depo-nome { font-weight: 700; font-size: 14px; color: var(--preto); }
-
-
-  /* PRICING — DOIS CARDS */
-  .preco-section { background: #fff; text-align: center; }
-  .preco-section .section-title { color: var(--preto); }
-
-  .pricing-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
-    justify-content: center;
-    align-items: flex-start;
-    margin-top: 16px;
-  }
-
-  /* card secundário ($5) */
-  .preco-box {
-    flex: 1 1 280px;
-    max-width: 380px;
-    background: #fff;
-    border-radius: 28px;
-    padding: 36px 28px;
-    border: 1.5px solid #e5e5ea;
-    box-shadow:
-      0 2px 0 rgba(0,0,0,0.04),
-      0 8px 32px rgba(0,0,0,0.07);
-    text-align: center;
-    position: relative;
-  }
-
-  /* card destaque ($9) — laranja estilo iOS */
-  .preco-box.destaque {
-    background: linear-gradient(160deg, var(--laranja-claro) 0%, var(--laranja) 50%, var(--laranja-escuro) 100%);
-    border: none;
-    box-shadow:
-      0 1px 0 rgba(255,255,255,0.28) inset,
-      0 -3px 0 rgba(0,0,0,0.2) inset,
-      0 20px 60px rgba(255,107,0,0.42),
-      0 4px 16px rgba(0,0,0,0.14);
-    transform: scale(1.04);
-  }
-  .preco-box.destaque::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 52%;
-    background: linear-gradient(180deg, rgba(255,255,255,0.18) 0%, transparent 100%);
-    border-radius: 28px 28px 0 0;
-    pointer-events: none;
-  }
-  @media(max-width:680px) { .preco-box.destaque { transform: scale(1); } }
-
-  .preco-popular-badge {
-    position: absolute;
-    top: -14px; left: 50%;
-    transform: translateX(-50%);
-    background: #fff;
-    color: var(--laranja);
-    font-family: 'Montserrat', sans-serif;
-    font-size: 11px; font-weight: 800; letter-spacing: 1.5px;
-    text-transform: uppercase; padding: 5px 20px;
-    border-radius: 100px; white-space: nowrap;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
-  }
-  .preco-desconto-tag {
-    display: inline-block;
-    background: rgba(255,255,255,0.22); color: #fff;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800; font-size: 12px;
-    padding: 5px 16px; border-radius: 100px;
-    letter-spacing: 1px; text-transform: uppercase; margin-bottom: 18px;
-  }
-  .preco-box:not(.destaque) .preco-desconto-tag {
-    background: var(--orange-light, #fff3e0); color: var(--laranja);
-  }
-  .preco-de { font-size: 17px; color: rgba(255,255,255,0.6); text-decoration: line-through; margin-bottom: 4px; }
-  .preco-box:not(.destaque) .preco-de { color: #aaa; }
-  .preco-por { font-size: 13px; color: rgba(255,255,255,0.7); margin-bottom: 4px; }
-  .preco-box:not(.destaque) .preco-por { color: #999; }
-  .preco-valor {
-    font-family: 'Montserrat', sans-serif;
-    font-size: clamp(48px, 10vw, 68px);
-    font-weight: 900; color: #fff;
-    line-height: 1; margin-bottom: 8px;
-  }
-  .preco-box:not(.destaque) .preco-valor { color: var(--laranja); }
-  .preco-parcelas { font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 24px; }
-  .preco-box:not(.destaque) .preco-parcelas { color: #999; }
-  .preco-parcelas strong { color: #fff; }
-  .preco-box:not(.destaque) .preco-parcelas strong { color: var(--preto); }
-  .preco-lista { list-style: none; margin-bottom: 24px; text-align: left; }
-  .preco-lista li {
-    display: flex; align-items: center; gap: 10px;
-    padding: 8px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.15);
-    font-size: 13.5px; color: rgba(255,255,255,0.9);
-  }
-  .preco-box:not(.destaque) .preco-lista li {
-    border-bottom-color: #f0f0f0; color: var(--cinza-texto);
-  }
-  .preco-lista li::before { content: '✓'; color: #fff; font-weight: 900; font-size: 15px; }
-  .preco-box:not(.destaque) .preco-lista li::before { color: var(--laranja); }
-  .seguro-info {
-    display: flex; align-items: center; justify-content: center;
-    gap: 7px; margin-top: 14px;
-    color: rgba(255,255,255,0.55); font-size: 13px;
-  }
-  .preco-box:not(.destaque) .seguro-info { color: #aaa; }
-
-  /* FAQ */
-  .faq-section { background: var(--cinza-claro); }
-  .faq-list { max-width: 700px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
-  .faq-item {
-    background: #fff; border-radius: 14px; overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.05);
-  }
-  .faq-q {
-    width: 100%; background: none; border: none; padding: 20px 22px;
-    display: flex; align-items: center; justify-content: space-between; gap: 12px;
-    cursor: pointer; font-family: 'Montserrat', sans-serif;
-    font-weight: 700; font-size: 14.5px; color: var(--preto); text-align: left;
-    transition: color 0.2s;
-  }
-  .faq-q:hover { color: var(--laranja); }
-  .faq-chev {
-    width: 24px; height: 24px; min-width: 24px; border-radius: 50%;
-    background: var(--cinza-medio); display: flex; align-items: center; justify-content: center;
-    font-size: 12px; transition: transform 0.3s, background 0.3s;
-  }
-  .faq-item.open .faq-chev { transform: rotate(180deg); background: var(--laranja); color: #fff; }
-  .faq-ans {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease, padding 0.3s;
-    font-size: 14px;
-    color: var(--cinza-texto);
-    line-height: 1.7;
-    padding: 0 22px;
-  }
-  .faq-item.open .faq-ans { padding: 0 22px 20px; }
-
-  footer {
-    background: #111; color: #777; text-align: center;
-    padding: 36px 20px; font-size: 13px; line-height: 1.85;
-  }
-  footer a { color: var(--laranja); text-decoration: none; }
-  footer strong { color: #fff; }
-
-
+@media print{
+  @page{size:210mm 297mm;margin:0}
+  *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+  body>*:not(.print-only){display:none!important}
+  .print-only{display:block!important;position:fixed;inset:0}
+  .a4-print{width:210mm!important;height:297mm!important;position:fixed;top:0;left:0;overflow:hidden;display:grid!important}
+  .a4-print.g1{grid-template:1fr/1fr}
+  .a4-print.g2{grid-template:1fr 1fr/1fr}
+  .a4-print.g4{grid-template:1fr 1fr/1fr 1fr}
+  .a4-print.g6{grid-template:1fr 1fr 1fr/1fr 1fr}
+  .a4-print .cel{border:1px dashed #999!important}
+}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-thumb{background:#ccc;border-radius:3px}
 </style>
 </head>
 <body>
 
-<section class="hero">
-  <div class="container">
-    <h1>+200 recetas dulces con proteína para <span>no volver a sufrir en la dieta</span></h1>
-    <p class="hero-sub">
-      Adelgaza, gana músculo y mantén tu dieta sin renunciar al sabor.<br>
-      ¡Recetas rápidas, saludables y deliciosas para tu día a día!
-    </p>
+<header>
+  <h1>🛒 OFERTA FÁCIL <em>A4</em></h1>
+  <button class="btn btn-print btn-sm" onclick="imprimir()">🖨️ Imprimir</button>
+</header>
 
-    <div class="hero-mockup-wrap">
-      <img src="https://raw.githubusercontent.com/Wender012/wheyfit/main/IMAGEM1.jpg" alt="200 Recetas Fit con Whey Protein">
+<div class="app">
+  <div class="painel" id="painel">
+
+    <div class="secao active" data-sec="formato">
+      <div class="s-titulo">📐 Formato</div>
+      <div class="fmt-list" id="fmt-list"></div>
+      <p id="fmt-desc" style="font-size:10px;color:var(--cinza);margin-top:8px;font-family:'Barlow Condensed',sans-serif;font-weight:700"></p>
     </div>
 
-    <a href="#plan-basico" class="btn-cta btn-cta-green btn-pulse" style="font-size:17px; padding:20px 46px;">
-      ADQUIRIR AHORA
-    </a>
-    <p style="margin-top:14px; font-size:13px; color:#aaa;">
-      🔒 Compra 100% segura &nbsp;•&nbsp; Acceso inmediato tras el pago
-    </p>
-  </div>
-</section>
-
-<section class="para-quem reveal" style="background:var(--laranja);">
-  <div class="container">
-    <h2 class="section-title" style="color:#fff;">Este e-book es <span style="color:#1A1A1A;">para ti</span> si...</h2>
-    <div class="divider" style="background:rgba(255,255,255,0.4);"></div>
-    <div class="checkitems">
-      <div class="checkitem" style="background:rgba(255,255,255,0.15);color:#fff;"><div class="ck-icon" style="background:rgba(255,255,255,0.25);color:#fff;">✓</div>Quieres adelgazar sin sufrir con la dieta</div>
-      <div class="checkitem" style="background:rgba(255,255,255,0.15);color:#fff;"><div class="ck-icon" style="background:rgba(255,255,255,0.25);color:#fff;">✓</div>Buscas ganar masa muscular con alimentación correcta</div>
-      <div class="checkitem" style="background:rgba(255,255,255,0.15);color:#fff;"><div class="ck-icon" style="background:rgba(255,255,255,0.25);color:#fff;">✓</div>No tienes tiempo y necesitas recetas rápidas</div>
-      <div class="checkitem" style="background:rgba(255,255,255,0.15);color:#fff;"><div class="ck-icon" style="background:rgba(255,255,255,0.25);color:#fff;">✓</div>Quieres usar el Whey Protein más allá del batido</div>
-      <div class="checkitem" style="background:rgba(255,255,255,0.15);color:#fff;"><div class="ck-icon" style="background:rgba(255,255,255,0.25);color:#fff;">✓</div>Estás cansado de comer lo mismo todos los días</div>
-      <div class="checkitem" style="background:rgba(255,255,255,0.15);color:#fff;"><div class="ck-icon" style="background:rgba(255,255,255,0.25);color:#fff;">✓</div>Quieres alimentarte bien sin gastar demasiado</div>
-    </div>
-    <div style="text-align:center; margin-top:36px;">
-      <a href="#plan-basico" class="btn-cta btn-cta-green" style="background:linear-gradient(180deg,#3ecf6e 0%,#22a84b 48%,#1a8c3c 100%);color:#fff;box-shadow:0 1px 0 rgba(255,255,255,0.32) inset,0 -2px 0 rgba(0,0,0,0.18) inset,0 8px 28px rgba(34,168,75,0.45);">ADQUIRIR AHORA</a>
-    </div>
-  </div>
-</section>
-
-<!-- MARQUEE RECEITAS -->
-<section class="receitas-section reveal">
-  <div class="container">
-    <h2 class="section-title">Algunas de las <span>recetas increíbles</span></h2>
-    <div class="divider"></div>
-    <p class="section-sub">¡Más de 200 opciones para desayuno, almuerzo, cena, meriendas y postres fit!</p>
-  </div>
-  <div class="marquee-wrap">
-    <div class="marquee-track" id="recMarquee">
-      <div class="receita-slide">
-        <img src="https://raw.githubusercontent.com/Wender012/wheyfit/main/mousse-fit.jpg" alt="Mousse Fit de Fresa">
-
+    <div class="secao" data-sec="design">
+      <div class="s-titulo">🎨 Design</div>
+      <div class="row2">
+        <div class="campo"><label>Cor faixa</label><input type="color" id="cor-faixa" value="#D00000"></div>
+        <div class="campo"><label>Cor texto</label><input type="color" id="cor-txt" value="#ffffff"></div>
       </div>
-      <div class="receita-slide">
-        <img src="https://raw.githubusercontent.com/Wender012/wheyfit/main/brigadeiro.jpg" alt="Brigadeiro Proteico">
-
-      </div>
-      <div class="receita-slide">
-        <img src="https://raw.githubusercontent.com/Wender012/wheyfit/main/COOKIE.jpg" alt="Cookie Fit">
-
-      </div>
-      <div class="receita-slide">
-        <img src="https://raw.githubusercontent.com/Wender012/wheyfit/main/bolo-de-caneca-de-banana.jpg" alt="Pastel de Taza de Banana">
-
-      </div>
-      <div class="receita-slide">
-        <img src="https://raw.githubusercontent.com/Wender012/wheyfit/main/bolo.jpg" alt="Pastel de Chocolate Fit">
-
-      </div>
-      <div class="receita-slide">
-        <img src="https://raw.githubusercontent.com/Wender012/wheyfit/main/bombom-de-whey.jpg" alt="Bombón de Whey">
-
-      </div>
-      <div class="receita-slide">
-        <img src="https://raw.githubusercontent.com/Wender012/wheyfit/main/panqueca-de-aveia.jpg" alt="Panqueque de Avena">
-
-      </div>
-      <div class="receita-slide">
-        <img src="https://raw.githubusercontent.com/Wender012/wheyfit/main/pudim-fit.jpg" alt="Pudín Fit">
-
-      </div>
-      <div class="receita-slide">
-        <img src="https://raw.githubusercontent.com/Wender012/wheyfit/main/brownie.jpg" alt="Brownie Proteico">
-
+      <div id="sec-logo">
+        <label class="upload-box" for="logo-file">
+          <input type="file" id="logo-file" accept="image/*" onchange="uploadLogo(event)">
+          <span>📁 Enviar logo (formato 1)</span>
+        </label>
+        <div class="campo" style="margin-top:8px"><label>Ou texto</label>
+          <input type="text" id="logo-txt" value="SUA LOGO" maxlength="20"></div>
       </div>
     </div>
-  </div>
-  <div style="text-align:center; margin-top:36px;">
-    <a href="#plan-basico" class="btn-cta">ADQUIRIR AHORA</a>
-  </div>
-</section>
 
-<!-- CARROSSEL BONUS -->
-<section class="bonus-section reveal" style="background:var(--laranja);">
-  <div class="container">
-    <h2 class="section-title" style="color:#fff;">Lo que vas a <span style="color:var(--amarelo);">recibir</span></h2>
-    <div class="divider" style="background:rgba(255,255,255,0.4);"></div>
-    <p class="section-sub" style="color:rgba(255,255,255,0.85);">Además de las 200 recetas, llevas estos bonos exclusivos sin costo adicional:</p>
-  </div>
-  <div class="marquee-wrap">
-    <div class="marquee-track" id="bonusMarquee">
-      <div class="bonus-card">
-        <div class="bonus-icon-wrap">
-          <img src="https://raw.githubusercontent.com/Wender012/wheyfit/main/whey-protein-principal.webp" alt="200 Recetas Fit con Whey Protein">
-        </div>
-        <span class="bonus-badge-tag">Principal</span>
-        <h3>200 Recetas Fit con Whey Protein</h3>
-        <p>El e-book completo con recetas para todas las comidas del día, del desayuno al postre.</p>
-      </div>
-      <div class="bonus-card">
-        <div class="bonus-icon-wrap">
-          <img src="https://raw.githubusercontent.com/Wender012/wheyfit/main/40-rceitas.webp" alt="+40 Recetas Saladas con Whey">
-        </div>
-        <span class="bonus-badge-tag">Bono 1</span>
-        <h3>+40 Recetas Saladas con Whey</h3>
-        <p>Opciones sabrosas y proteicas para almuerzo, cena y meriendas del día a día.</p>
-      </div>
-      <div class="bonus-card">
-        <div class="bonus-icon-wrap">
-          <img src="https://raw.githubusercontent.com/Wender012/wheyfit/main/doces-familia.webp" alt="Dulces Fit para Niños y Familia">
-        </div>
-        <span class="bonus-badge-tag">Bono 2</span>
-        <h3>Dulces Fit para Niños y Familia</h3>
-        <p>Recetas saludables y deliciosas que toda la familia va a amar, sin culpa.</p>
-      </div>
+    <div class="secao" data-sec="galeria">
+      <div class="s-titulo">🖼️ Galeria <span class="badge" id="gal-count">0</span></div>
+      <button class="btn btn-azul btn-block btn-sm" onclick="abrirModal()" style="margin-bottom:8px">+ Adicionar Produto</button>
+      <div class="galeria" id="galeria"></div>
     </div>
-  </div>
-  <div class="carousel-dots" id="bonusDots"></div>
-</section>
 
-<!-- MARQUEE DEPOIMENTOS -->
-<section class="depoimentos-section reveal">
-  <div class="container">
-    <h2 class="section-title">Lo que dicen nuestros <span>clientes</span></h2>
-    <div class="divider"></div>
-    <p class="section-sub">¡Más de 10.000 personas ya transformaron su alimentación con el e-book!</p>
-  </div>
-  <div class="marquee-wrap">
-    <div class="marquee-track" id="depoMarquee">
-
-      <div class="depo-card hi">
-        <div class="depo-img-slot">
-          <img src="https://raw.githubusercontent.com/Wender012/wheyfit/main/depo1.webp" alt="Ana Claudia S.">
-        </div>
-        <div class="depo-body">
-          <div class="depo-quote">"</div>
-          <div class="depo-stars">★★★★★</div>
-          <p class="depo-text">Nunca pensé que podría comer de forma saludable y aún sentirme satisfecha. ¡Las recetas son increíbles, fáciles de hacer y quedan deliciosas!</p>
-          <div class="depo-autor">
-            <div class="depo-avatar">A</div>
-            <div><div class="depo-nome">Ana Claudia S.</div></div>
-          </div>
+    <div class="secao" data-sec="oferta">
+      <div class="s-titulo">✏️ Oferta
+        <span id="edit-badge" style="display:none;background:#f59e0b;color:#fff;font-size:9px;font-weight:900;padding:2px 7px;border-radius:8px;font-family:'Barlow Condensed',sans-serif">EDITANDO</span>
+      </div>
+      <div class="campo"><label>Nome</label><input type="text" id="f-nome" value="COSTELA DE GADO" maxlength="40"></div>
+      <div class="row2">
+        <div class="campo"><label>Preço R$</label><input type="number" id="f-preco" value="22.99" step="0.01" min="0" inputmode="decimal"></div>
+        <div class="campo"><label>Unidade</label>
+          <select id="f-un"><option>CADA</option><option>KG</option><option>UND</option><option>PCT</option><option>DZ</option><option>L</option><option>100G</option></select>
         </div>
       </div>
+      <button class="btn btn-vm btn-block" onclick="salvarOferta()">💾 Salvar</button>
+    </div>
 
-      <div class="depo-card">
-        <div class="depo-img-slot">
-          <img src="https://raw.githubusercontent.com/Wender012/wheyfit/main/depo2.webp" alt="María G.">
-        </div>
-        <div class="depo-body">
-          <div class="depo-quote">"</div>
-          <div class="depo-stars">★★★★★</div>
-          <p class="depo-text">Yo era de las que compraba proteína y la dejaba olvidada… Con estas recetas empecé a hacer postres de verdad y ahora es la mejor parte de mi día. No parece dieta.</p>
-          <div class="depo-autor">
-            <div class="depo-avatar" style="background:linear-gradient(135deg,#f7971e,#ffd200)">M</div>
-            <div><div class="depo-nome">María G.</div></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="depo-card">
-        <div class="depo-img-slot">
-          <img src="https://raw.githubusercontent.com/Wender012/wheyfit/main/depo3.webp" alt="Lucía R.">
-        </div>
-        <div class="depo-body">
-          <div class="depo-quote">"</div>
-          <div class="depo-stars">★★★★★</div>
-          <p class="depo-text">No tengo tiempo para cocinar y pensé que esto iba a ser complicado… pero nada que ver. Las recetas son rápidas y fáciles, y los ingredientes son los que ya tengo en casa.</p>
-          <div class="depo-autor">
-            <div class="depo-avatar" style="background:linear-gradient(135deg,#43e97b,#38f9d7)">L</div>
-            <div><div class="depo-nome">Lucía R.</div></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="depo-card">
-        <div class="depo-img-slot">
-          <img src="https://raw.githubusercontent.com/Wender012/wheyfit/main/depo4.webp" alt="Sofía L.">
-        </div>
-        <div class="depo-body">
-          <div class="depo-quote">"</div>
-          <div class="depo-stars">★★★★★</div>
-          <p class="depo-text">Mi dieta antes era aburrida y siempre terminaba abandonando. Desde que empecé con estas recetas, todo cambió. Disfruto lo que como y ya no siento que estoy a dieta.</p>
-          <div class="depo-autor">
-            <div class="depo-avatar" style="background:linear-gradient(135deg,#a18cd1,#fbc2eb)">S</div>
-            <div><div class="depo-nome">Sofía L.</div></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="depo-card">
-        <div class="depo-img-slot">
-          <img src="https://raw.githubusercontent.com/Wender012/wheyfit/main/depo5.webp" alt="Juliana P.">
-        </div>
-        <div class="depo-body">
-          <div class="depo-quote">"</div>
-          <div class="depo-stars">★★★★★</div>
-          <p class="depo-text">Soy entrenadora personal e indico este e-book a todos mis alumnos. ¡La variedad de recetas es impresionante y los resultados son reales!</p>
-          <div class="depo-autor">
-            <div class="depo-avatar" style="background:linear-gradient(135deg,#f093fb,#f5576c)">J</div>
-            <div><div class="depo-nome">Juliana P.</div></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="depo-card">
-        <div class="depo-img-slot">
-          <img src="https://raw.githubusercontent.com/Wender012/wheyfit/main/depo6.webp" alt="Marcos F.">
-        </div>
-        <div class="depo-body">
-          <div class="depo-quote">"</div>
-          <div class="depo-stars">★★★★★</div>
-          <p class="depo-text">Toda mi familia adoptó las recetas. ¡Mis hijos ni se dan cuenta de que están comiendo fit! Excelente relación calidad-precio.</p>
-          <div class="depo-autor">
-            <div class="depo-avatar" style="background:linear-gradient(135deg,#4facfe,#00f2fe)">M</div>
-            <div><div class="depo-nome">Marcos F.</div></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="depo-card">
-        <div class="depo-img-slot">
-          <img src="https://raw.githubusercontent.com/Wender012/wheyfit/main/depo7.webp" alt="Camila L.">
-        </div>
-        <div class="depo-body">
-          <div class="depo-quote">"</div>
-          <div class="depo-stars">★★★★★</div>
-          <p class="depo-text">Lo compré con miedo de que fuera más de lo mismo, pero me sorprendí. Recetas diferentes, con pasos simples e ingredientes fáciles de conseguir.</p>
-          <div class="depo-autor">
-            <div class="depo-avatar" style="background:linear-gradient(135deg,#fa709a,#fee140)">C</div>
-            <div><div class="depo-nome">Camila L.</div></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="depo-card">
-        <div class="depo-img-slot">
-          <!-- <img src="https://raw.githubusercontent.com/SEU_USER/SEU_REPO/main/img/depo6.jpg" alt="Thiago B."> -->
-          <span>Foto / Screenshot</span>
-          <span style="font-size:9px;opacity:.6;font-weight:400;text-transform:none">depo6.jpg</span>
-        </div>
-        <div class="depo-body">
-          <div class="depo-quote">"</div>
-          <div class="depo-stars">★★★★★</div>
-          <p class="depo-text">Gané 4 kg de masa muscular en 2 meses y aún consigo comer bien. La guía de macros fue un diferencial enorme en mi rutina.</p>
-          <div class="depo-autor">
-            <div class="depo-avatar" style="background:linear-gradient(135deg,#a18cd1,#fbc2eb)">T</div>
-            <div><div class="depo-nome">Thiago B.</div></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="depo-card">
-        <div class="depo-img-slot">
-          <!-- <img src="https://raw.githubusercontent.com/SEU_USER/SEU_REPO/main/img/depo7.jpg" alt="Laura V."> -->
-          <span>Foto / Screenshot</span>
-          <span style="font-size:9px;opacity:.6;font-weight:400;text-transform:none">depo7.jpg</span>
-        </div>
-        <div class="depo-body">
-          <div class="depo-quote">"</div>
-          <div class="depo-stars">★★★★★</div>
-          <p class="depo-text">¡Llevaba años intentando comer sano y siempre lo dejaba! Con estas recetas por fin lo logré. Son tan ricas que ni parece dieta.</p>
-          <div class="depo-autor">
-            <div class="depo-avatar" style="background:linear-gradient(135deg,#f7971e,#ffd200)">L</div>
-            <div><div class="depo-nome">Laura V.</div></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="depo-card">
-        <div class="depo-img-slot">
-          <!-- <img src="https://raw.githubusercontent.com/SEU_USER/SEU_REPO/main/img/depo8.jpg" alt="Diego S."> -->
-          <span>Foto / Screenshot</span>
-          <span style="font-size:9px;opacity:.6;font-weight:400;text-transform:none">depo8.jpg</span>
-        </div>
-        <div class="depo-body">
-          <div class="depo-quote">"</div>
-          <div class="depo-stars">★★★★★</div>
-          <p class="depo-text">El precio es increíble para la cantidad de contenido. Tengo el e-book hace 2 semanas y ya probé más de 15 recetas. ¡Todas espectaculares!</p>
-          <div class="depo-autor">
-            <div class="depo-avatar" style="background:linear-gradient(135deg,#11998e,#38ef7d)">D</div>
-            <div><div class="depo-nome">Diego S.</div></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="depo-card">
-        <div class="depo-img-slot">
-          <!-- <img src="https://raw.githubusercontent.com/SEU_USER/SEU_REPO/main/img/depo9.jpg" alt="Patricia N."> -->
-          <span>Foto / Screenshot</span>
-          <span style="font-size:9px;opacity:.6;font-weight:400;text-transform:none">depo9.jpg</span>
-        </div>
-        <div class="depo-body">
-          <div class="depo-quote">"</div>
-          <div class="depo-stars">★★★★★</div>
-          <p class="depo-text">Mi nutricionista se sorprendió con mis resultados. Le mostré el e-book y ahora ella también lo recomienda a sus pacientes.</p>
-          <div class="depo-autor">
-            <div class="depo-avatar" style="background:linear-gradient(135deg,#fc5c7d,#6a82fb)">P</div>
-            <div><div class="depo-nome">Patricia N.</div></div>
-          </div>
-        </div>
-      </div>
-
+    <div class="secao" data-sec="lista">
+      <div class="s-titulo">📋 Ofertas <span class="badge" id="of-count">0</span></div>
+      <p style="font-size:10px;color:var(--cinza);margin-bottom:6px">Toque numa célula → depois numa oferta</p>
+      <div class="of-lista" id="of-lista"></div>
     </div>
   </div>
 
-  <div style="text-align:center; margin-top:40px;">
-    <a href="#plan-basico" class="btn-cta">ADQUIRIR AHORA</a>
+  <div class="preview">
+    <div class="p-tools">
+      <button class="btn btn-print btn-sm" onclick="imprimir()">🖨️ Imprimir A4</button>
+      <span class="p-hint">210×297mm • <span id="info-fmt">1 produto</span></span>
+    </div>
+    <div class="a4 g1" id="a4"></div>
   </div>
-</section>
+</div>
 
-<!-- PRICING — DOIS CARDS -->
-<section class="preco-section reveal" id="comprar">
-  <div class="container">
-    <h2 class="section-title">¡Elige tu <span>plan</span> y empieza hoy!</h2>
-    <div class="divider" style="background:linear-gradient(90deg,var(--laranja),var(--amarelo))"></div>
+<!-- TOOLBAR mobile -->
+<nav class="mob-toolbar" id="mob-toolbar">
+  <button class="mob-tab sel" data-tab="formato" onclick="abrirAba('formato')"><span>📐</span>Formato</button>
+  <button class="mob-tab" data-tab="galeria" onclick="abrirAba('galeria')"><span>🖼️</span>Galeria</button>
+  <button class="mob-tab" data-tab="oferta" onclick="abrirAba('oferta')"><span>✏️</span>Oferta</button>
+  <button class="mob-tab" data-tab="lista" onclick="abrirAba('lista')"><span>📋</span>Lista</button>
+  <button class="mob-tab" data-tab="design" onclick="abrirAba('design')"><span>🎨</span>Design</button>
+</nav>
 
-    <div class="pricing-grid" style="flex-direction:column; align-items:center;">
+<div class="print-only" style="display:none"><div class="a4-print g1" id="a4-print"></div></div>
 
-      <!-- CARD $9 — DESTAQUE — PRIMEIRO -->
-      <div class="preco-box destaque" id="plan-basico" style="max-width:420px; width:100%;">
-        <div class="preco-popular-badge">⭐ MÁS POPULAR</div>
-        <div class="preco-desconto-tag">Oferta Especial</div>
-        <div class="preco-de">Antes $27,00</div>
-        <div class="preco-por">Por solo</div>
-        <div class="preco-valor">$9</div>
-        <div class="preco-parcelas">Pago único · Acceso inmediato</div>
-        <ul class="preco-lista">
-          <li>200 Recetas Fit con Whey Protein</li>
-          <li>Tabla de calorías y macros</li>
-          <li>Modo de preparación detallado con fotos</li>
-          <li>Soporte + Garantía 7 días</li>
-          <li>Acceso de por vida</li>
-          <li>+30 Recetas Inéditas para Air Fryer</li>
-          <li>+5 Postres Proteicos Internacionales</li>
-          <li>🎁 +35 Recetas Pre y Post Entrenamiento</li>
-          <li>🎁 +40 Recetas Saladas con Whey</li>
-          <li>🎁 Dulces Fit para Niños y Familia</li>
-        </ul>
-        <a href="https://pay.hotmart.com/X105017606O?checkoutMode=10&bid=1774134596708" class="btn-cta btn-cta-green" style="width:100%; font-size:16px; padding:20px; justify-content:center;">
-          ADQUIRIR AHORA
-        </a>
-        <div class="seguro-info">🔒 Pago 100% seguro vía Hotmart</div>
-      </div>
-
-      <!-- CARD $5 — ABAIXO -->
-      <div class="preco-box" style="max-width:420px; width:100%;">
-        <div class="preco-desconto-tag">Acceso Básico</div>
-        <div class="preco-por">Por solo</div>
-        <div class="preco-valor">$5</div>
-        <div class="preco-parcelas">Pago único · Acceso inmediato</div>
-        <ul class="preco-lista">
-          <li>50 Recetas Fit con Whey Protein</li>
-          <li>Tabla de calorías y macros</li>
-          <li>Modo de preparación detallado con fotos</li>
-          <li>Soporte + Garantía 7 días</li>
-          <li>Acceso de por vida</li>
-        </ul>
-        <a href="https://pay.hotmart.com/E105018974J?checkoutMode=10" class="btn-cta" style="width:100%; font-size:15px; padding:18px; justify-content:center;">
-          ADQUIRIR AHORA
-        </a>
-        <div class="seguro-info">🔒 Pago 100% seguro</div>
-      </div>
-
+<div class="modal-bg" id="modal">
+  <div class="modal">
+    <h3>🖼️ Adicionar Produto <button class="modal-close" onclick="fecharModal()">✕</button></h3>
+    <div class="campo"><label>Nome</label><input type="text" id="m-nome" maxlength="50"></div>
+    <label class="upload-box" for="m-file"><input type="file" id="m-file" accept="image/*" onchange="uploadProdFile(event)"><span>📁 Tirar foto / Enviar imagem</span></label>
+    <img id="m-prev" style="width:90px;height:80px;object-fit:contain;border:2px solid var(--borda);border-radius:6px;display:none;margin:10px auto">
+    <div style="display:flex;align-items:center;gap:8px;margin-top:8px">
+      <input type="checkbox" id="m-rmbg" checked style="width:18px;height:18px">
+      <label for="m-rmbg" style="font-size:12px">Remover fundo branco</label>
+    </div>
+    <div style="display:flex;gap:8px;margin-top:12px">
+      <button class="btn btn-outline btn-block" onclick="fecharModal()">Cancelar</button>
+      <button class="btn btn-azul btn-block" onclick="addProduto()">✓ Adicionar</button>
     </div>
   </div>
-</section>
-
-<!-- FAQ -->
-<footer>
-  <p><strong>200 Recetas Fit con Whey Protein</strong></p>
-  <p style="margin-top:8px;">
-    <a href="#">Política de Privacidad</a> &nbsp;|&nbsp;
-    <a href="#">Términos de Uso</a> &nbsp;|&nbsp;
-    <a href="#">Contacto</a>
-  </p>
-  <p style="margin-top:12px;">© 2025 Recetas con Whey. Todos los derechos reservados.</p>
-  <p style="margin-top:8px; font-size:12px; color:#555;">Este producto se distribuye vía Hotmart. Los resultados pueden variar de persona a persona.</p>
-</footer>
+</div>
 
 <script>
-document.querySelectorAll('.faq-item').forEach(function(item) {
-  item.querySelector('.faq-q').addEventListener('click', function() {
-    var isOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(function(i) {
-      i.classList.remove('open');
-      i.querySelector('.faq-ans').style.maxHeight = null;
-    });
-    if (!isOpen) {
-      item.classList.add('open');
-      item.querySelector('.faq-ans').style.maxHeight = item.querySelector('.faq-ans').scrollHeight + 'px';
-    }
+const LS_GAL='of4_gal',LS_OF='of4_ofertas',LS_LAYOUT='of4_layout';
+let galeria=JSON.parse(localStorage.getItem(LS_GAL)||'[]');
+let ofertas=JSON.parse(localStorage.getItem(LS_OF)||'[]');
+let layout=JSON.parse(localStorage.getItem(LS_LAYOUT)||'null')||{fmt:1,slots:{},cor:'#D00000',corTxt:'#ffffff',logoImg:null,logoTxt:'SUA LOGO'};
+let produtoAtual=null,editandoId=null,slotSelecionado=null,modalFileData=null;
+const isMobile=()=>window.matchMedia('(max-width:840px)').matches;
+
+const FORMATOS=[
+  {id:1,label:'1 Produto',sub:'Folha inteira',celulas:1,grid:'g1'},
+  {id:2,label:'2 Produtos',sub:'Meia folha',celulas:2,grid:'g2'},
+  {id:4,label:'4 Produtos',sub:'Quadrantes',celulas:4,grid:'g4'},
+  {id:6,label:'6 Produtos',sub:'3×2 Mini',celulas:6,grid:'g6'},
+];
+
+function renderFormatos(){
+  document.getElementById('fmt-list').innerHTML=FORMATOS.map(f=>{
+    const cells='<div></div>'.repeat(f.celulas);
+    const cols=f.id===1||f.id===2?'1fr':'1fr 1fr';
+    const rows=f.id===1?'1fr':(f.id===2?'1fr 1fr':(f.id===4?'1fr 1fr':'1fr 1fr 1fr'));
+    return `<div class="fmt-btn ${layout.fmt===f.id?'sel':''}" onclick="setFmt(${f.id})">
+      <div class="fmt-icon" style="grid-template:${rows}/${cols}">${cells}</div>
+      <div class="fmt-lbl">${f.label}</div>
+      <div class="fmt-sub">${f.sub}</div>
+    </div>`;
+  }).join('');
+  const cur=FORMATOS.find(f=>f.id===layout.fmt);
+  document.getElementById('fmt-desc').textContent=cur.id===1?'Formato rico: logo, produto grande, preço.':'Formato compacto: só nome e preço (recortar).';
+  document.getElementById('info-fmt').textContent=cur.label;
+  const sl=document.getElementById('sec-logo'); if(sl) sl.style.display=cur.id===1?'block':'none';
+}
+function setFmt(id){layout.fmt=id; salvarLayout(); renderFormatos(); render();}
+function salvarLayout(){localStorage.setItem(LS_LAYOUT,JSON.stringify(layout));}
+
+function renderGaleria(){
+  document.getElementById('gal-count').textContent=galeria.length;
+  const el=document.getElementById('galeria');
+  if(!galeria.length){el.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:18px;color:var(--cinza);font-size:11px">Nenhum produto</div>'; return;}
+  el.innerHTML=galeria.map(p=>`
+    <div class="gal-item ${produtoAtual&&produtoAtual.id===p.id?'sel':''}" onclick="escolherProduto('${p.id}')">
+      <img src="${p.url}">
+      <div class="gal-nome">${p.nome}</div>
+      <button class="gal-del" onclick="event.stopPropagation();delProd('${p.id}')">✕</button>
+    </div>`).join('');
+}
+function escolherProduto(id){produtoAtual=galeria.find(p=>p.id===id); if(!produtoAtual) return; document.getElementById('f-nome').value=produtoAtual.nome.toUpperCase(); renderGaleria(); if(isMobile()) abrirAba('oferta');}
+function delProd(id){if(!confirm('Remover?')) return; galeria=galeria.filter(p=>p.id!==id); localStorage.setItem(LS_GAL,JSON.stringify(galeria)); renderGaleria();}
+
+function abrirModal(){document.getElementById('modal').classList.add('open'); document.getElementById('m-nome').value=''; document.getElementById('m-prev').style.display='none'; modalFileData=null;}
+function fecharModal(){document.getElementById('modal').classList.remove('open');}
+function uploadProdFile(ev){
+  const f=ev.target.files[0]; if(!f) return;
+  const r=new FileReader();
+  r.onload=e=>{modalFileData=e.target.result; const p=document.getElementById('m-prev'); p.src=modalFileData; p.style.display='block'; if(!document.getElementById('m-nome').value) document.getElementById('m-nome').value=f.name.replace(/\.[^.]+$/,'');};
+  r.readAsDataURL(f);
+}
+function removerFundoAsync(src,tol=240,soft=12){
+  return new Promise((res,rej)=>{
+    const img=new Image(); img.crossOrigin='anonymous';
+    img.onload=()=>{
+      const c=document.createElement('canvas'); c.width=img.naturalWidth; c.height=img.naturalHeight;
+      const ctx=c.getContext('2d'); ctx.drawImage(img,0,0);
+      const d=ctx.getImageData(0,0,c.width,c.height), px=d.data, ts=Math.max(1,tol-soft);
+      for(let i=0;i<px.length;i+=4){
+        const m=Math.min(px[i],px[i+1],px[i+2]);
+        if(m>=tol) px[i+3]=0;
+        else if(m>=ts){const r=(m-ts)/(tol-ts); px[i+3]=Math.round(px[i+3]*(1-r));}
+      }
+      ctx.putImageData(d,0,0); res(c.toDataURL('image/png'));
+    };
+    img.onerror=rej; img.src=src;
   });
+}
+async function addProduto(){
+  const nome=document.getElementById('m-nome').value.trim();
+  if(!nome||!modalFileData){alert('Nome e imagem obrigatórios'); return;}
+  let url=modalFileData;
+  if(document.getElementById('m-rmbg').checked){try{url=await removerFundoAsync(url);}catch(e){}}
+  const p={id:'p'+Date.now(),nome,url};
+  galeria.unshift(p);
+  localStorage.setItem(LS_GAL,JSON.stringify(galeria));
+  fecharModal(); renderGaleria(); escolherProduto(p.id);
+}
+
+function uploadLogo(ev){const f=ev.target.files[0]; if(!f) return; const r=new FileReader(); r.onload=e=>{layout.logoImg=e.target.result; salvarLayout(); render();}; r.readAsDataURL(f);}
+
+function salvarOferta(){
+  const o={id:editandoId||'o'+Date.now(),nome:document.getElementById('f-nome').value,preco:parseFloat(document.getElementById('f-preco').value||'0'),un:document.getElementById('f-un').value,produto:produtoAtual};
+  if(editandoId) ofertas=ofertas.map(x=>x.id===editandoId?o:x); else ofertas.unshift(o);
+  localStorage.setItem(LS_OF,JSON.stringify(ofertas));
+  editandoId=null; document.getElementById('edit-badge').style.display='none';
+  if(slotSelecionado!==null){layout.slots[slotSelecionado]=o.id; slotSelecionado=null; salvarLayout();}
+  renderOfertas(); render();
+  if(isMobile()) abrirAba('lista');
+}
+function renderOfertas(){
+  document.getElementById('of-count').textContent=ofertas.length;
+  const el=document.getElementById('of-lista');
+  if(!ofertas.length){el.innerHTML='<div style="text-align:center;padding:16px;color:var(--cinza);font-size:11px">Nenhuma oferta</div>'; return;}
+  const assigned=new Set(Object.values(layout.slots));
+  el.innerHTML=ofertas.map(o=>{
+    const slot=Object.entries(layout.slots).find(([k,v])=>v===o.id);
+    return `<div class="of-card ${assigned.has(o.id)?'assigned':''}" onclick="clicarOferta('${o.id}')">
+      <img src="${o.produto?o.produto.url:''}">
+      <div class="of-info"><div class="of-nome">${o.nome}</div><div class="of-preco">R$ ${o.preco.toFixed(2)} / ${o.un}</div></div>
+      ${slot?`<span class="of-slot">#${+slot[0]+1}</span>`:''}
+      <button class="btn btn-sm" style="background:#fee;color:#c00" onclick="event.stopPropagation();delOferta('${o.id}')">✕</button>
+    </div>`;
+  }).join('');
+}
+function clicarOferta(id){
+  const o=ofertas.find(x=>x.id===id); if(!o) return;
+  if(slotSelecionado!==null){layout.slots[slotSelecionado]=id; slotSelecionado=null; salvarLayout(); renderOfertas(); render(); return;}
+  editandoId=id;
+  document.getElementById('f-nome').value=o.nome;
+  document.getElementById('f-preco').value=o.preco;
+  document.getElementById('f-un').value=o.un;
+  if(o.produto){produtoAtual=o.produto; renderGaleria();}
+  document.getElementById('edit-badge').style.display='inline-block';
+  if(isMobile()) abrirAba('oferta');
+}
+function delOferta(id){
+  if(!confirm('Remover?')) return;
+  ofertas=ofertas.filter(x=>x.id!==id);
+  Object.keys(layout.slots).forEach(k=>{if(layout.slots[k]===id) delete layout.slots[k];});
+  localStorage.setItem(LS_OF,JSON.stringify(ofertas));
+  salvarLayout(); renderOfertas(); render();
+}
+
+function render(){
+  layout.cor=document.getElementById('cor-faixa').value;
+  layout.corTxt=document.getElementById('cor-txt').value;
+  layout.logoTxt=document.getElementById('logo-txt').value||'SUA LOGO';
+  salvarLayout();
+  const fmt=FORMATOS.find(f=>f.id===layout.fmt);
+  const a4=document.getElementById('a4');
+  a4.className='a4 '+fmt.grid;
+  a4.innerHTML=fmt.id===1?htmlRico(ofertas.find(o=>o.id===layout.slots[0])):htmlGrade(fmt.celulas);
+  requestAnimationFrame(()=>escalarCelulas(a4));
+}
+function htmlRico(o){
+  const cor=layout.cor, ct=layout.corTxt;
+  const nome=(o?o.nome:'SEU PRODUTO').toUpperCase();
+  const preco=(o?o.preco:0).toFixed(2).split('.');
+  const un=o?o.un:'CADA';
+  const prod=o&&o.produto?`<img src="${o.produto.url}">`:'<div style="color:#bbb;font-family:Barlow Condensed,sans-serif;font-size:14px;text-align:center">Toque e atribua<br>uma oferta</div>';
+  const logo=layout.logoImg?`<img src="${layout.logoImg}">`:`<span>${layout.logoTxt}</span>`;
+  return `
+    <div class="enc-logo-box" style="font-size:clamp(10px,2.8vw,18px)">${logo}</div>
+    <div class="enc-prod-box ${slotSelecionado===0?'sel':''}" onclick="selecionarSlot(0)">${prod}</div>
+    <div class="enc-faixa" style="background:${cor};color:${ct}">
+      <div class="enc-fn"><div class="enc-fn-nome" style="font-size:clamp(14px,5vw,36px);color:${ct}">${nome}</div></div>
+      <div class="enc-fp" style="color:${ct}">
+        <span class="enc-rs" style="font-size:clamp(8px,2.2vw,18px);color:${ct}">R$</span>
+        <span class="enc-val" style="font-size:clamp(30px,12vw,90px);color:${ct}">${preco[0]}</span>
+        <div class="enc-dir">
+          <span class="enc-cent" style="font-size:clamp(12px,4vw,32px);color:${ct}">,${preco[1]}</span>
+          <span class="enc-un" style="font-size:clamp(7px,1.8vw,14px);color:${ct}">${un}</span>
+        </div>
+      </div>
+    </div>`;
+}
+function htmlGrade(n){let o=''; for(let i=0;i<n;i++){const id=layout.slots[i]; const of=id?ofertas.find(x=>x.id===id):null; o+=celula(i,of);} return o;}
+function celula(i,o){
+  const cor=layout.cor, ct=layout.corTxt;
+  const sel=slotSelecionado===i?'sel':'';
+  if(!o) return `<div class="cel empty ${sel}" onclick="selecionarSlot(${i})"></div>`;
+  const [r,c]=o.preco.toFixed(2).split('.');
+  return `<div class="cel ${sel}" onclick="selecionarSlot(${i})">
+    <div class="cel-img">${o.produto?`<img src="${o.produto.url}">`:''}</div>
+    <div class="cel-faixa" style="background:${cor};color:${ct}">
+      <div class="cel-nome" style="color:${ct}">${o.nome.toUpperCase()}</div>
+      <div class="cel-preco" style="color:${ct}">
+        <span class="cel-rs" style="color:${ct}">R$</span>
+        <span class="cel-val">${r}</span>
+        <span class="cel-cent">,${c}</span>
+      </div>
+    </div>
+  </div>`;
+}
+function escalarCelulas(root){
+  root.querySelectorAll('.cel:not(.empty)').forEach(cel=>{
+    const h=cel.getBoundingClientRect().height; if(!h) return;
+    const n=cel.querySelector('.cel-nome'), rs=cel.querySelector('.cel-rs'), v=cel.querySelector('.cel-val'), c=cel.querySelector('.cel-cent');
+    if(n) n.style.fontSize=(h*0.10)+'px';
+    if(rs) rs.style.fontSize=(h*0.07)+'px';
+    if(v) v.style.fontSize=(h*0.22)+'px';
+    if(c) c.style.fontSize=(h*0.10)+'px';
+  });
+}
+
+function selecionarSlot(i){
+  slotSelecionado=i; render();
+  if(isMobile()) abrirAba('lista');
+}
+
+// ═══ ADAPTAÇÃO: MESMO PAINEL, 2 MODOS ═══
+function abrirAba(sec){
+  // só faz sentido no mobile — mostra só a seção ativa
+  document.querySelectorAll('.secao').forEach(s=>s.classList.toggle('active',s.dataset.sec===sec));
+  document.querySelectorAll('.mob-tab').forEach(t=>t.classList.toggle('sel',t.dataset.tab===sec));
+  document.getElementById('painel').classList.add('open');
+  document.getElementById('painel').scrollTop=0;
+}
+function fecharPainel(){document.getElementById('painel').classList.remove('open');}
+
+// toggle painel via toque no preview (mobile)
+document.querySelector('.preview').addEventListener('click',e=>{
+  if(!isMobile()) return;
+  const painel=document.getElementById('painel');
+  if(painel.classList.contains('open') && !e.target.closest('.a4') && !e.target.closest('.p-tools')){
+    fecharPainel();
+  }
 });
 
-/* ── MARQUEE INFINITO — duplica itens para loop perfeito ── */
-['recMarquee', 'bonusMarquee', 'depoMarquee'].forEach(id => {
-  const track = document.getElementById(id);
-  if (!track) return;
-  track.innerHTML = track.innerHTML + track.innerHTML;
-});
+function imprimir(){
+  const src=document.getElementById('a4');
+  const dst=document.getElementById('a4-print');
+  const fmt=FORMATOS.find(f=>f.id===layout.fmt);
+  dst.className='a4-print '+fmt.grid;
+  dst.innerHTML=src.innerHTML;
+  const A4H=297*96/25.4;
+  const r=src.getBoundingClientRect();
+  const k=A4H/r.height;
+  const esc=(el)=>{if(el.style){const fs=el.style.fontSize; if(fs&&fs.endsWith('px')) el.style.fontSize=(parseFloat(fs)*k)+'px';} [...(el.children||[])].forEach(esc);};
+  esc(dst);
+  if(fmt.id===1){
+    [['.enc-fn-nome',36],['.enc-val',90],['.enc-cent',32],['.enc-rs',18],['.enc-un',14],['.enc-logo-box span',28]].forEach(([s,p])=>{const e=dst.querySelector(s); if(e) e.style.fontSize=(p*k*(r.width/480))+'px';});
+  }
+  window.print();
+}
 
-
-
-
+function init(){
+  document.getElementById('cor-faixa').value=layout.cor;
+  document.getElementById('cor-txt').value=layout.corTxt;
+  document.getElementById('logo-txt').value=layout.logoTxt;
+  ['cor-faixa','cor-txt','logo-txt'].forEach(id=>document.getElementById(id).addEventListener('input',render));
+  renderFormatos(); renderGaleria(); renderOfertas(); render();
+  window.addEventListener('resize',()=>{escalarCelulas(document.getElementById('a4'));});
+}
+init();
+</script>
 </body>
 </html>
