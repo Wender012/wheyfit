@@ -1,487 +1,373 @@
-<!DOCTYPE html>
+html = r"""<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-<meta name="theme-color" content="#1a3fbf">
-<title>Oferta Fácil — Adaptativo</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Domine a edição de vídeos e crie conteúdos que prendem atenção — mesmo começando do zero.">
+<title>Dominando a Edição de Vídeos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600&display=swap');
-*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
-:root{--vm:#D00000;--vm2:#8B0000;--am:#FFD700;--azul:#1E3FBF;--bg:#e8eaf0;--borda:#dde0e8;--txt:#1a1a1a;--cinza:#6b7280;--safe-b:env(safe-area-inset-bottom,0px)}
-html,body{overscroll-behavior:none}
-body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--txt);height:100vh;height:100dvh;overflow:hidden}
-
-header{background:linear-gradient(135deg,#1a3fbf,#0f2a8a);color:#fff;height:52px;padding:0 14px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200;box-shadow:0 3px 14px rgba(15,42,138,.45)}
-header h1{font-family:"Bebas Neue",sans-serif;font-size:20px;letter-spacing:1.5px;display:flex;align-items:center;gap:6px}
-header h1 em{background:var(--am);color:#0f2a8a;padding:2px 6px;border-radius:4px;font-style:normal;font-size:10px;font-family:"Barlow Condensed",sans-serif;font-weight:900;letter-spacing:1px}
-
-.btn{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:13px;border:none;padding:10px 14px;border-radius:8px;cursor:pointer;display:inline-flex;align-items:center;gap:5px;touch-action:manipulation}
-.btn-vm{background:var(--vm);color:#fff}
-.btn-azul{background:#1a3fbf;color:#fff}
-.btn-print{background:#16a34a;color:#fff}
-.btn-outline{background:#fff;color:#1a3fbf;border:2px solid #1a3fbf}
-.btn-sm{padding:7px 11px;font-size:12px}
-.btn-block{width:100%;justify-content:center;padding:12px}
-.btn-ico{width:38px;height:38px;padding:0;justify-content:center;font-size:16px}
-
-.app{display:grid;grid-template-columns:380px 1fr;height:calc(100dvh - 52px)}
-.painel{overflow-y:auto;background:#fff;border-right:1px solid var(--borda);-webkit-overflow-scrolling:touch}
-.secao{border-bottom:1px solid var(--borda);padding:13px 15px}
-.s-titulo{font-family:"Barlow Condensed",sans-serif;font-weight:800;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#94a3b8;margin-bottom:10px;display:flex;align-items:center;justify-content:space-between;gap:8px}
-.badge{background:#1a3fbf;color:#fff;font-size:9px;font-weight:900;padding:2px 6px;border-radius:8px;font-family:"Barlow Condensed",sans-serif}
-.campo{margin-bottom:8px}
-.campo label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--cinza);display:block;margin-bottom:3px}
-.campo input,.campo select{width:100%;padding:11px 12px;border:2px solid var(--borda);border-radius:8px;font-family:"Barlow",sans-serif;font-size:15px;background:#fafafa;color:var(--txt)}
-.campo input:focus,.campo select:focus{outline:none;border-color:#1a3fbf;background:#fff}
-.row2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-
-.fmt-list{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
-.fmt-btn{cursor:pointer;border:2.5px solid var(--borda);border-radius:8px;padding:6px 4px;text-align:center;background:#fff;font-family:"Barlow Condensed",sans-serif}
-.fmt-btn.sel{border-color:#FFD700;background:#fffbea}
-.fmt-icon{width:100%;aspect-ratio:210/297;background:#1a3fbf;border-radius:3px;display:grid;gap:2px;padding:3px;margin-bottom:4px}
-.fmt-icon>div{background:#fff;border-radius:1px}
-.fmt-lbl{font-weight:800;font-size:11px}
-.fmt-sub{font-size:9px;color:#888;font-weight:600}
-
-.upload-box{border:2px dashed var(--borda);border-radius:8px;padding:14px;text-align:center;cursor:pointer;background:#fafafa}
-.upload-box input{display:none}
-.upload-box span{font-family:"Barlow Condensed",sans-serif;font-size:12px;color:#555;font-weight:700}
-
-.galeria{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;max-height:220px;overflow-y:auto;background:#f7f8fc;border-radius:8px;padding:7px;border:1px solid var(--borda)}
-.gal-item{position:relative;border:2px solid transparent;border-radius:6px;overflow:hidden;cursor:pointer;background:#fff;aspect-ratio:1}
-.gal-item.sel{border-color:var(--am)}
-.gal-item img{width:100%;height:100%;object-fit:contain;padding:4px}
-.gal-nome{position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,.7);color:#fff;font-size:8px;font-weight:700;padding:2px 4px;text-align:center;font-family:"Barlow Condensed",sans-serif}
-.gal-del{position:absolute;top:2px;right:2px;background:var(--vm);color:#fff;border:none;width:22px;height:22px;border-radius:50%;font-size:11px;cursor:pointer;font-weight:900}
-
-.of-lista{display:flex;flex-direction:column;gap:5px;max-height:240px;overflow-y:auto}
-.of-card{display:flex;align-items:center;gap:8px;padding:8px 10px;border:1.5px solid var(--borda);border-radius:8px;cursor:pointer;background:#fafafa}
-.of-card.assigned{border-color:#16a34a;background:#ecfdf5}
-.of-card img{width:40px;height:40px;object-fit:contain;border:1px solid var(--borda);border-radius:4px;background:#fff}
-.of-info{flex:1;min-width:0}
-.of-nome{font-family:"Barlow Condensed",sans-serif;font-weight:800;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.of-preco{font-size:12px;color:var(--vm);font-weight:700}
-.of-slot{font-size:10px;background:#16a34a;color:#fff;padding:3px 6px;border-radius:4px;font-weight:900}
-
-.modal-bg{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:300;display:none;align-items:center;justify-content:center;padding:16px}
-.modal-bg.open{display:flex}
-.modal{background:#fff;border-radius:12px;padding:18px;width:100%;max-width:420px;max-height:85vh;overflow-y:auto}
-.modal h3{font-family:"Barlow Condensed",sans-serif;font-weight:800;font-size:17px;margin-bottom:12px;display:flex;justify-content:space-between}
-.modal-close{background:none;border:none;font-size:22px;color:#999;cursor:pointer}
-
-.preview{background:#c8cad4;display:flex;flex-direction:column;align-items:center;padding:16px;gap:10px;overflow-y:auto}
-.p-tools{display:flex;gap:6px;align-items:center;flex-wrap:wrap;justify-content:center}
-.p-hint{font-size:10px;color:#666;font-family:"Barlow Condensed",sans-serif}
-.a4{width:min(480px,100%);aspect-ratio:210/297;background:#fff;box-shadow:0 8px 36px rgba(0,0,0,.38);position:relative;overflow:hidden;display:grid}
-.a4.g1{grid-template:1fr/1fr}
-.a4.g2{grid-template:1fr 1fr/1fr}
-.a4.g4{grid-template:1fr 1fr/1fr 1fr}
-.a4.g6{grid-template:1fr 1fr 1fr/1fr 1fr}
-
-.cel{position:relative;background:#fff;border:1px dashed rgba(0,0,0,.15);overflow:hidden;display:flex;flex-direction:column;cursor:pointer}
-.cel.empty::after{content:'+ Toque p/ atribuir';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#bbb;font-family:"Barlow Condensed",sans-serif;font-size:11px;font-weight:700;padding:6px;text-align:center}
-.cel.sel{box-shadow:inset 0 0 0 3px #FFD700}
-.cel-img{flex:1;display:flex;align-items:center;justify-content:center;padding:6%;min-height:0}
-.cel-img img{max-width:100%;max-height:100%;object-fit:contain;filter:drop-shadow(0 2px 4px rgba(0,0,0,.2))}
-.cel-faixa{background:var(--vm);color:#fff;padding:4% 5%;display:flex;align-items:center;justify-content:space-between;gap:4%;min-height:28%}
-.cel-nome{font-family:"Bebas Neue",sans-serif;line-height:1;flex:1;word-break:break-word;overflow:hidden}
-.cel-preco{font-family:"Bebas Neue",sans-serif;display:flex;align-items:baseline;line-height:1;white-space:nowrap}
-
-.a4.g1 .enc-logo-box{position:absolute;top:3.5%;right:3%;width:28%;height:14%;display:flex;align-items:center;justify-content:center;z-index:10}
-.a4.g1 .enc-logo-box img{max-width:100%;max-height:100%;object-fit:contain}
-.a4.g1 .enc-logo-box span{font-family:"Bebas Neue",sans-serif;color:#fff;text-shadow:0 2px 4px rgba(0,0,0,.5);letter-spacing:1px}
-.a4.g1 .enc-prod-box{position:absolute;top:30%;left:4%;right:4%;height:39%;display:flex;align-items:center;justify-content:center;z-index:10}
-.a4.g1 .enc-prod-box img{max-width:100%;max-height:100%;object-fit:contain;filter:drop-shadow(0 6px 14px rgba(0,0,0,.35))}
-.a4.g1 .enc-faixa{position:absolute;bottom:0;left:0;right:0;height:27%;display:flex;align-items:center;padding:0 4% 0 5%;z-index:10}
-.a4.g1 .enc-fn{flex:0 0 44%;padding-right:3%}
-.a4.g1 .enc-fn-nome{font-family:"Bebas Neue",sans-serif;line-height:1.02;letter-spacing:.5px}
-.a4.g1 .enc-fp{flex:1;display:flex;align-items:baseline;justify-content:flex-end}
-.a4.g1 .enc-rs,.a4.g1 .enc-val,.a4.g1 .enc-cent{font-family:"Bebas Neue",sans-serif}
-.a4.g1 .enc-rs{align-self:flex-start;margin-top:3px}
-.a4.g1 .enc-val{line-height:.88}
-.a4.g1 .enc-dir{display:flex;flex-direction:column;margin-left:2px}
-.a4.g1 .enc-un{font-family:"Bebas Neue",sans-serif;background:rgba(0,0,0,.22);padding:1px 5px;border-radius:3px;margin-top:2px}
-
-.mob-toolbar{display:none;position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--borda);z-index:150;box-shadow:0 -4px 14px rgba(0,0,0,.08);padding-bottom:var(--safe-b);grid-template-columns:repeat(5,1fr);height:calc(60px + var(--safe-b))}
-.mob-tab{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;border:none;background:none;font-family:"Barlow Condensed",sans-serif;font-size:10px;font-weight:800;color:#666;cursor:pointer}
-.mob-tab span{font-size:20px}
-.mob-tab.sel{color:var(--azul)}
-
-/* ═══ ADAPTAÇÃO MOBILE ═══ */
-@media (max-width:840px){
-  .app{grid-template-columns:1fr;grid-template-rows:1fr;height:calc(100dvh - 52px - 60px - var(--safe-b))}
-  .painel{position:fixed;top:52px;bottom:calc(60px + var(--safe-b));left:0;right:0;z-index:140;transform:translateX(-100%);transition:transform .28s ease;border-right:none}
-  .painel.open{transform:translateX(0)}
-  .preview{padding:10px}
-  .a4{width:min(100%,calc((100dvh - 180px) * 210/297))}
-  .mob-toolbar{display:grid}
-  .fmt-list{grid-template-columns:repeat(2,1fr)}
-  .galeria{grid-template-columns:repeat(4,1fr);max-height:none}
-  .of-lista{max-height:none}
-  header h1{font-size:17px}
-  header h1 em{display:none}
-  .secao{display:none}
-  .secao.active{display:block}
-}
-@media (min-width:841px){
-  .mob-toolbar{display:none!important}
-  .secao{display:block!important}
-  .painel{transform:none!important}
-}
-
-@media print{
-  @page{size:210mm 297mm;margin:0}
-  *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
-  body>*:not(.print-only){display:none!important}
-  .print-only{display:block!important;position:fixed;inset:0}
-  .a4-print{width:210mm!important;height:297mm!important;position:fixed;top:0;left:0;overflow:hidden;display:grid!important}
-  .a4-print.g1{grid-template:1fr/1fr}
-  .a4-print.g2{grid-template:1fr 1fr/1fr}
-  .a4-print.g4{grid-template:1fr 1fr/1fr 1fr}
-  .a4-print.g6{grid-template:1fr 1fr 1fr/1fr 1fr}
-  .a4-print .cel{border:1px dashed #999!important}
-}
-::-webkit-scrollbar{width:5px}::-webkit-scrollbar-thumb{background:#ccc;border-radius:3px}
+  :root{
+    --bg:#0a0a0a;
+    --bg-2:#151515;
+    --bg-light:#f5f5f5;
+    --card:#1a1a1a;
+    --primary:#FF8947;
+    --primary-2:#D1723D;
+    --text:#ffffff;
+    --text-muted:#cfcfcf;
+    --text-dark:#1a1a1a;
+    --text-dark-muted:#555;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;height:auto;display:block}
+  a{text-decoration:none;color:inherit}
+  .container{max-width:1180px;margin:0 auto;padding:0 20px}
+  section{padding:80px 0}
+  h1,h2,h3{line-height:1.15;font-weight:800}
+  .eyebrow{
+    display:inline-block;color:var(--primary);
+    font-size:13px;letter-spacing:3px;font-weight:700;
+    text-transform:uppercase;margin-bottom:14px;
+  }
+  .highlight{color:var(--primary)}
+  /* ==== BUTTON ==== */
+  .btn{
+    display:inline-block;background:var(--primary);
+    color:#fff;font-weight:800;font-size:17px;
+    padding:18px 36px;border-radius:10px;
+    text-transform:uppercase;letter-spacing:.5px;
+    transition:.2s;cursor:pointer;border:0;
+    box-shadow:0 8px 20px rgba(255,137,71,.3);
+  }
+  .btn:hover{transform:translateY(-2px);filter:brightness(1.07);box-shadow:0 12px 28px rgba(255,137,71,.45)}
+  /* ==== HERO ==== */
+  .hero{
+    background:var(--bg);text-align:center;padding:60px 0 80px;
+  }
+  .hero .logo{margin:0 auto 30px;width:140px}
+  .hero h1{
+    font-size:clamp(30px,5vw,54px);
+    font-weight:900;text-transform:uppercase;
+    margin-bottom:24px;
+  }
+  .hero h1 .highlight{display:inline}
+  .hero .sub{
+    color:var(--text-muted);max-width:680px;margin:0 auto 36px;
+    font-size:clamp(15px,2vw,18px);
+  }
+  .hero .sub strong{color:#fff}
+  .hero .btn{margin-bottom:32px}
+  .checks{
+    list-style:none;max-width:560px;margin:0 auto;
+    text-align:left;
+  }
+  .checks li{
+    display:flex;gap:14px;align-items:flex-start;
+    padding:8px 0;color:var(--text-muted);font-size:16px;
+  }
+  .checks li i{color:var(--primary);margin-top:5px;font-size:14px}
+  /* ==== OPORTUNIDADE ==== */
+  .opportunity{background:var(--bg-light);color:var(--text-dark)}
+  .opportunity .grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;
+  }
+  .opportunity img{border-radius:12px}
+  .opportunity h2{
+    font-size:clamp(26px,3.4vw,40px);
+    font-weight:900;text-transform:uppercase;margin-bottom:24px;
+  }
+  .opportunity p{color:var(--text-dark-muted);margin-bottom:18px;font-size:16px}
+  .opportunity p strong{color:var(--text-dark);font-weight:800}
+  /* ==== METHOD ==== */
+  .method{background:var(--bg);text-align:center}
+  .method .heading{margin-bottom:50px}
+  .method h2{font-size:clamp(28px,3.6vw,42px);text-transform:uppercase}
+  .method .heading p{color:var(--text-muted);max-width:680px;margin:14px auto 0}
+  .method .heading p strong{color:#fff}
+  .grid-4{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-bottom:50px;
+  }
+  .method-card{
+    background:transparent;border-radius:14px;overflow:hidden;
+    display:flex;flex-direction:column;
+  }
+  .method-card .img-wrap{
+    aspect-ratio:1/1.15;border-radius:14px;overflow:hidden;background:var(--primary);
+    position:relative;
+  }
+  .method-card .img-wrap img{width:100%;height:100%;object-fit:cover}
+  .method-card .info{
+    background:#1c1c1c;padding:22px 18px;border-radius:12px;margin-top:14px;text-align:center;
+    flex:1;display:flex;flex-direction:column;justify-content:center;
+  }
+  .method-card h3{font-size:17px;text-transform:uppercase;margin-bottom:10px}
+  .method-card p{color:var(--text-muted);font-size:14px;line-height:1.55}
+  /* ==== TESTIMONIALS ==== */
+  .testimonials{background:var(--bg-2);text-align:center}
+  .testimonials h2{font-size:clamp(28px,3.6vw,42px);text-transform:uppercase;margin-bottom:50px}
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .testimonial{
+    background:#fff;color:var(--text-dark);
+    border-radius:14px;padding:28px 24px;text-align:left;
+  }
+  .testimonial.alt{background:var(--primary);color:#fff}
+  .stars{display:flex;gap:4px;margin-bottom:16px;color:#FFB800;font-size:18px}
+  .testimonial.alt .stars{color:#fff}
+  .testimonial p{font-size:16px;margin-bottom:18px;line-height:1.55}
+  .testimonial .name{font-weight:800;text-transform:uppercase;font-size:15px;letter-spacing:.5px}
+  /* ==== BONUS ==== */
+  .bonus{background:var(--bg);text-align:center}
+  .bonus h2{font-size:clamp(28px,3.6vw,42px);text-transform:uppercase;margin-bottom:50px;max-width:780px;margin-left:auto;margin-right:auto}
+  .bonus h2 .highlight{display:inline}
+  .bonus-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+  .bonus-card{
+    background:#1c1c1c;border-radius:14px;padding:18px;text-align:center;
+  }
+  .bonus-card .img-wrap{
+    border-radius:10px;overflow:hidden;margin-bottom:18px;background:var(--primary);
+    aspect-ratio:1/1;
+  }
+  .bonus-card .img-wrap img{width:100%;height:100%;object-fit:cover}
+  .bonus-card h3{text-transform:uppercase;font-size:18px;margin-bottom:10px}
+  .bonus-card p{color:var(--text-muted);font-size:14px}
+  /* ==== GUARANTEE ==== */
+  .guarantee{background:var(--bg);text-align:center}
+  .guarantee .seal{width:160px;margin:0 auto 24px}
+  .guarantee h2{font-size:clamp(24px,3vw,34px);text-transform:uppercase;margin-bottom:18px}
+  .guarantee p{color:var(--text-muted);max-width:680px;margin:0 auto;font-size:16px}
+  /* ==== FAQ ==== */
+  .faq{background:var(--bg);padding-top:40px}
+  .faq .eyebrow{text-align:left}
+  .faq h2{font-size:clamp(28px,3.6vw,42px);text-transform:uppercase;margin-bottom:18px}
+  .faq .intro{color:var(--text-muted);margin-bottom:30px;max-width:600px}
+  .faq .btn{margin-bottom:40px}
+  .accordion{
+    background:#1c1c1c;border-radius:12px;margin-bottom:14px;overflow:hidden;
+  }
+  .accordion-header{
+    padding:20px 24px;cursor:pointer;display:flex;
+    justify-content:space-between;align-items:center;gap:16px;
+    font-size:15px;font-weight:700;
+  }
+  .accordion-header i{color:var(--primary);transition:.3s;font-size:14px}
+  .accordion.open .accordion-header i{transform:rotate(180deg)}
+  .accordion-body{
+    max-height:0;overflow:hidden;transition:max-height .35s ease;
+    padding:0 24px;color:var(--text-muted);font-size:15px;line-height:1.6;
+  }
+  .accordion.open .accordion-body{max-height:400px;padding:0 24px 22px}
+  /* ==== FOOTER ==== */
+  footer{background:#000;text-align:center;padding:30px 20px;color:#777;font-size:13px}
+  /* ==== RESPONSIVE ==== */
+  @media (max-width:900px){
+    .grid-4{grid-template-columns:repeat(2,1fr)}
+    .opportunity .grid{grid-template-columns:1fr;gap:32px}
+    .grid-2,.bonus-grid{grid-template-columns:1fr}
+    section{padding:60px 0}
+  }
+  @media (max-width:520px){
+    .grid-4{grid-template-columns:1fr}
+    .hero{padding:40px 0 60px}
+  }
 </style>
 </head>
 <body>
 
-<header>
-  <h1>🛒 OFERTA FÁCIL <em>A4</em></h1>
-  <button class="btn btn-print btn-sm" onclick="imprimir()">🖨️ Imprimir</button>
-</header>
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <img class="logo" src="https://projects.clickmax.io/f916bf58-58cc-465b-b5c7-a92d9bcc3496/assets/d9e79fe0-7488-4d74-9025-66444b672381" alt="Logo">
+    <h1>Domine a edição de vídeos e crie conteúdos que <span class="highlight">prendem atenção</span></h1>
+    <p class="sub">Aprenda a editar, estruturar e publicar vídeos que realmente engajam — <strong>mesmo que você esteja começando do zero.</strong></p>
+    <a href="#checkout" class="btn">QUERO DOMINAR A EDIÇÃO DE VÍDEOS</a>
+    <ul class="checks">
+      <li><i class="fa-solid fa-check-double"></i> Aprenda a editar vídeos do zero, mesmo sem experiência</li>
+      <li><i class="fa-solid fa-check-double"></i> Transforme gravações simples em vídeos profissionais</li>
+      <li><i class="fa-solid fa-check-double"></i> Conteúdos que prendem atenção e aumentam seu alcance</li>
+    </ul>
+  </div>
+</section>
 
-<div class="app">
-  <div class="painel" id="painel">
-
-    <div class="secao active" data-sec="formato">
-      <div class="s-titulo">📐 Formato</div>
-      <div class="fmt-list" id="fmt-list"></div>
-      <p id="fmt-desc" style="font-size:10px;color:var(--cinza);margin-top:8px;font-family:'Barlow Condensed',sans-serif;font-weight:700"></p>
-    </div>
-
-    <div class="secao" data-sec="design">
-      <div class="s-titulo">🎨 Design</div>
-      <div class="row2">
-        <div class="campo"><label>Cor faixa</label><input type="color" id="cor-faixa" value="#D00000"></div>
-        <div class="campo"><label>Cor texto</label><input type="color" id="cor-txt" value="#ffffff"></div>
+<!-- OPORTUNIDADE -->
+<section class="opportunity">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <img src="https://projects.clickmax.io/f916bf58-58cc-465b-b5c7-a92d9bcc3496/assets/af7883e4-42fc-45d0-afbd-f6befb9c10d9" alt="Edição de vídeos">
       </div>
-      <div id="sec-logo">
-        <label class="upload-box" for="logo-file">
-          <input type="file" id="logo-file" accept="image/*" onchange="uploadLogo(event)">
-          <span>📁 Enviar logo (formato 1)</span>
-        </label>
-        <div class="campo" style="margin-top:8px"><label>Ou texto</label>
-          <input type="text" id="logo-txt" value="SUA LOGO" maxlength="20"></div>
+      <div>
+        <h2>A oportunidade que você precisava para nunca mais <span class="highlight">travar na hora de editar</span> e publicar seus vídeos.</h2>
+        <p>Além do método completo Dominando a Edição, que já ajudou criadores a transformar ideias simples em conteúdos profissionais, você também recebe estratégias práticas para editar vídeos que realmente prendem atenção.</p>
+        <p>O método Dominando a Edição foi criado para ensinar, de forma direta e prática, como transformar gravações simples em vídeos envolventes.</p>
+        <p>Você aprende cortes estratégicos, ritmo, narrativa visual e edição que mantém o público assistindo até o final — mesmo que esteja começando do zero.</p>
+        <p><strong>Não é apenas sobre editar vídeos.</strong></p>
+        <p>É sobre criar conteúdos que capturam atenção, aumentam engajamento e fazem seu perfil crescer.</p>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="secao" data-sec="galeria">
-      <div class="s-titulo">🖼️ Galeria <span class="badge" id="gal-count">0</span></div>
-      <button class="btn btn-azul btn-block btn-sm" onclick="abrirModal()" style="margin-bottom:8px">+ Adicionar Produto</button>
-      <div class="galeria" id="galeria"></div>
+<!-- MÉTODO -->
+<section class="method">
+  <div class="container">
+    <div class="heading">
+      <span class="eyebrow">Método</span>
+      <h2>O que você vai dominar</h2>
+      <p>Ao longo do Dominando a Edição, você vai aprender na prática como <strong>transformar ideias simples em vídeos que prendem atenção do começo ao fim.</strong></p>
     </div>
-
-    <div class="secao" data-sec="oferta">
-      <div class="s-titulo">✏️ Oferta
-        <span id="edit-badge" style="display:none;background:#f59e0b;color:#fff;font-size:9px;font-weight:900;padding:2px 7px;border-radius:8px;font-family:'Barlow Condensed',sans-serif">EDITANDO</span>
-      </div>
-      <div class="campo"><label>Nome</label><input type="text" id="f-nome" value="COSTELA DE GADO" maxlength="40"></div>
-      <div class="row2">
-        <div class="campo"><label>Preço R$</label><input type="number" id="f-preco" value="22.99" step="0.01" min="0" inputmode="decimal"></div>
-        <div class="campo"><label>Unidade</label>
-          <select id="f-un"><option>CADA</option><option>KG</option><option>UND</option><option>PCT</option><option>DZ</option><option>L</option><option>100G</option></select>
+    <div class="grid-4">
+      <div class="method-card">
+        <div class="img-wrap"><img src="https://projects.clickmax.io/f916bf58-58cc-465b-b5c7-a92d9bcc3496/assets/19d29a82-c689-46d6-9e0c-5b84d7ab21ff" alt="Processo de edição"></div>
+        <div class="info">
+          <h3>Processo de edição mais rápido</h3>
+          <p>Organize seu fluxo de trabalho para editar vídeos com muito mais agilidade e eficiência.</p>
         </div>
       </div>
-      <button class="btn btn-vm btn-block" onclick="salvarOferta()">💾 Salvar</button>
+      <div class="method-card">
+        <div class="img-wrap"><img src="https://projects.clickmax.io/f916bf58-58cc-465b-b5c7-a92d9bcc3496/assets/77d0a986-f32e-4ebe-a8e8-ea6914992030" alt="Edição com ritmo"></div>
+        <div class="info">
+          <h3>Edição com ritmo profissional</h3>
+          <p>Como organizar cenas, criar fluidez e manter o público assistindo sem perder o interesse.</p>
+        </div>
+      </div>
+      <div class="method-card">
+        <div class="img-wrap"><img src="https://projects.clickmax.io/f916bf58-58cc-465b-b5c7-a92d9bcc3496/assets/de57d117-60ea-4efd-8dd6-e7270a79e6cb" alt="Transições"></div>
+        <div class="info">
+          <h3>Transições e efeitos que valorizam</h3>
+          <p>Use efeitos e transições da forma certa para deixar seus vídeos mais profissionais sem exageros.</p>
+        </div>
+      </div>
+      <div class="method-card">
+        <div class="img-wrap"><img src="https://projects.clickmax.io/f916bf58-58cc-465b-b5c7-a92d9bcc3496/assets/ed1aaf4f-d3ba-4419-b9c8-f9a740c4d286" alt="Retenção"></div>
+        <div class="info">
+          <h3>Vídeos que geram retenção</h3>
+          <p>Aprenda a montar vídeos pensados para redes sociais, com início forte.</p>
+        </div>
+      </div>
     </div>
+    <a href="#checkout" class="btn">QUERO DOMINAR A EDIÇÃO DE VÍDEOS</a>
+  </div>
+</section>
 
-    <div class="secao" data-sec="lista">
-      <div class="s-titulo">📋 Ofertas <span class="badge" id="of-count">0</span></div>
-      <p style="font-size:10px;color:var(--cinza);margin-bottom:6px">Toque numa célula → depois numa oferta</p>
-      <div class="of-lista" id="of-lista"></div>
+<!-- DEPOIMENTOS -->
+<section class="testimonials">
+  <div class="container">
+    <span class="eyebrow">Depoimentos</span>
+    <h2>O que alunos dizem</h2>
+    <div class="grid-2" style="margin-bottom:24px">
+      <div class="testimonial">
+        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p>"Minhas capas ficaram absurdamente mais profissionais."</p>
+        <div class="name">Camila Nogueira</div>
+      </div>
+      <div class="testimonial">
+        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p>"Agora meus vídeos parecem de produtor profissional."</p>
+        <div class="name">Leandro Santos</div>
+      </div>
+    </div>
+    <div class="grid-2">
+      <div class="testimonial">
+        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p>"Eu não dependo mais de designers para criar meus visuais."</p>
+        <div class="name">Rafael Martins</div>
+      </div>
+      <div class="testimonial alt">
+        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p>"Me ajudou a enxergar o processo com mais estratégia e menos tentativa e erro. Muito acima da média."</p>
+        <div class="name">Marlos Henri</div>
+      </div>
     </div>
   </div>
+</section>
 
-  <div class="preview">
-    <div class="p-tools">
-      <button class="btn btn-print btn-sm" onclick="imprimir()">🖨️ Imprimir A4</button>
-      <span class="p-hint">210×297mm • <span id="info-fmt">1 produto</span></span>
-    </div>
-    <div class="a4 g1" id="a4"></div>
-  </div>
-</div>
-
-<!-- TOOLBAR mobile -->
-<nav class="mob-toolbar" id="mob-toolbar">
-  <button class="mob-tab sel" data-tab="formato" onclick="abrirAba('formato')"><span>📐</span>Formato</button>
-  <button class="mob-tab" data-tab="galeria" onclick="abrirAba('galeria')"><span>🖼️</span>Galeria</button>
-  <button class="mob-tab" data-tab="oferta" onclick="abrirAba('oferta')"><span>✏️</span>Oferta</button>
-  <button class="mob-tab" data-tab="lista" onclick="abrirAba('lista')"><span>📋</span>Lista</button>
-  <button class="mob-tab" data-tab="design" onclick="abrirAba('design')"><span>🎨</span>Design</button>
-</nav>
-
-<div class="print-only" style="display:none"><div class="a4-print g1" id="a4-print"></div></div>
-
-<div class="modal-bg" id="modal">
-  <div class="modal">
-    <h3>🖼️ Adicionar Produto <button class="modal-close" onclick="fecharModal()">✕</button></h3>
-    <div class="campo"><label>Nome</label><input type="text" id="m-nome" maxlength="50"></div>
-    <label class="upload-box" for="m-file"><input type="file" id="m-file" accept="image/*" onchange="uploadProdFile(event)"><span>📁 Tirar foto / Enviar imagem</span></label>
-    <img id="m-prev" style="width:90px;height:80px;object-fit:contain;border:2px solid var(--borda);border-radius:6px;display:none;margin:10px auto">
-    <div style="display:flex;align-items:center;gap:8px;margin-top:8px">
-      <input type="checkbox" id="m-rmbg" checked style="width:18px;height:18px">
-      <label for="m-rmbg" style="font-size:12px">Remover fundo branco</label>
-    </div>
-    <div style="display:flex;gap:8px;margin-top:12px">
-      <button class="btn btn-outline btn-block" onclick="fecharModal()">Cancelar</button>
-      <button class="btn btn-azul btn-block" onclick="addProduto()">✓ Adicionar</button>
+<!-- BÔNUS -->
+<section class="bonus">
+  <div class="container">
+    <span class="eyebrow">Bônus exclusivo</span>
+    <h2>Você recebe bônus que vão <span class="highlight">acelerar seus resultados</span></h2>
+    <div class="bonus-grid">
+      <div class="bonus-card">
+        <div class="img-wrap"><img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&q=80" alt="Biblioteca"></div>
+        <h3>Biblioteca editáveis</h3>
+        <p>Arquivos prontos para você praticar edição na prática e entender exatamente como cada vídeo foi construído.</p>
+      </div>
+      <div class="bonus-card">
+        <div class="img-wrap"><img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=600&q=80" alt="Pack"></div>
+        <h3>Pack de transições e efeitos</h3>
+        <p>Coleção pronta de transições e efeitos para aplicar diretamente nos seus vídeos.</p>
+      </div>
     </div>
   </div>
-</div>
+</section>
+
+<!-- GARANTIA -->
+<section class="guarantee">
+  <div class="container">
+    <img class="seal" src="https://cdn-icons-png.flaticon.com/512/2454/2454282.png" alt="Garantia">
+    <h2>Garantia de satisfação</h2>
+    <p>Acreditamos no valor do que entregamos e, por isso, você pode acessar o conteúdo com total segurança. Caso não fique satisfeito por qualquer motivo, basta nos comunicar dentro do prazo de garantia para receber o reembolso conforme as condições informadas. Simples, transparente e sem burocracia.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="container">
+    <span class="eyebrow">FAQ</span>
+    <h2>Perguntas frequentes</h2>
+    <p class="intro">Reunimos aqui as perguntas mais comuns para facilitar sua decisão</p>
+    <a href="#checkout" class="btn">QUERO COMEÇAR AGORA</a>
+
+    <div class="accordion open">
+      <div class="accordion-header">Para quem este produto é indicado?<i class="fa-solid fa-chevron-down"></i></div>
+      <div class="accordion-body"><p>Este produto é indicado para quem deseja aprender, evoluir e aplicar o conteúdo na prática, independentemente do nível de experiência.</p></div>
+    </div>
+    <div class="accordion">
+      <div class="accordion-header">Preciso ter conhecimento prévio para começar?<i class="fa-solid fa-chevron-down"></i></div>
+      <div class="accordion-body"><p>Não. O conteúdo foi estruturado para atender desde iniciantes até pessoas que já possuem alguma experiência e querem evoluir.</p></div>
+    </div>
+    <div class="accordion">
+      <div class="accordion-header">Como funciona o acesso ao conteúdo?<i class="fa-solid fa-chevron-down"></i></div>
+      <div class="accordion-body"><p>Após a confirmação da inscrição, o acesso é liberado online, permitindo que você consuma o conteúdo no seu ritmo, de onde estiver.</p></div>
+    </div>
+    <div class="accordion">
+      <div class="accordion-header">Por quanto tempo terei acesso?<i class="fa-solid fa-chevron-down"></i></div>
+      <div class="accordion-body"><p>O acesso é liberado pelo período informado na página, permitindo que você revise o conteúdo sempre que precisar durante esse tempo.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Dominando a Edição. Todos os direitos reservados.
+</footer>
 
 <script>
-const LS_GAL='of4_gal',LS_OF='of4_ofertas',LS_LAYOUT='of4_layout';
-let galeria=JSON.parse(localStorage.getItem(LS_GAL)||'[]');
-let ofertas=JSON.parse(localStorage.getItem(LS_OF)||'[]');
-let layout=JSON.parse(localStorage.getItem(LS_LAYOUT)||'null')||{fmt:1,slots:{},cor:'#D00000',corTxt:'#ffffff',logoImg:null,logoTxt:'SUA LOGO'};
-let produtoAtual=null,editandoId=null,slotSelecionado=null,modalFileData=null;
-const isMobile=()=>window.matchMedia('(max-width:840px)').matches;
-
-const FORMATOS=[
-  {id:1,label:'1 Produto',sub:'Folha inteira',celulas:1,grid:'g1'},
-  {id:2,label:'2 Produtos',sub:'Meia folha',celulas:2,grid:'g2'},
-  {id:4,label:'4 Produtos',sub:'Quadrantes',celulas:4,grid:'g4'},
-  {id:6,label:'6 Produtos',sub:'3×2 Mini',celulas:6,grid:'g6'},
-];
-
-function renderFormatos(){
-  document.getElementById('fmt-list').innerHTML=FORMATOS.map(f=>{
-    const cells='<div></div>'.repeat(f.celulas);
-    const cols=f.id===1||f.id===2?'1fr':'1fr 1fr';
-    const rows=f.id===1?'1fr':(f.id===2?'1fr 1fr':(f.id===4?'1fr 1fr':'1fr 1fr 1fr'));
-    return `<div class="fmt-btn ${layout.fmt===f.id?'sel':''}" onclick="setFmt(${f.id})">
-      <div class="fmt-icon" style="grid-template:${rows}/${cols}">${cells}</div>
-      <div class="fmt-lbl">${f.label}</div>
-      <div class="fmt-sub">${f.sub}</div>
-    </div>`;
-  }).join('');
-  const cur=FORMATOS.find(f=>f.id===layout.fmt);
-  document.getElementById('fmt-desc').textContent=cur.id===1?'Formato rico: logo, produto grande, preço.':'Formato compacto: só nome e preço (recortar).';
-  document.getElementById('info-fmt').textContent=cur.label;
-  const sl=document.getElementById('sec-logo'); if(sl) sl.style.display=cur.id===1?'block':'none';
-}
-function setFmt(id){layout.fmt=id; salvarLayout(); renderFormatos(); render();}
-function salvarLayout(){localStorage.setItem(LS_LAYOUT,JSON.stringify(layout));}
-
-function renderGaleria(){
-  document.getElementById('gal-count').textContent=galeria.length;
-  const el=document.getElementById('galeria');
-  if(!galeria.length){el.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:18px;color:var(--cinza);font-size:11px">Nenhum produto</div>'; return;}
-  el.innerHTML=galeria.map(p=>`
-    <div class="gal-item ${produtoAtual&&produtoAtual.id===p.id?'sel':''}" onclick="escolherProduto('${p.id}')">
-      <img src="${p.url}">
-      <div class="gal-nome">${p.nome}</div>
-      <button class="gal-del" onclick="event.stopPropagation();delProd('${p.id}')">✕</button>
-    </div>`).join('');
-}
-function escolherProduto(id){produtoAtual=galeria.find(p=>p.id===id); if(!produtoAtual) return; document.getElementById('f-nome').value=produtoAtual.nome.toUpperCase(); renderGaleria(); if(isMobile()) abrirAba('oferta');}
-function delProd(id){if(!confirm('Remover?')) return; galeria=galeria.filter(p=>p.id!==id); localStorage.setItem(LS_GAL,JSON.stringify(galeria)); renderGaleria();}
-
-function abrirModal(){document.getElementById('modal').classList.add('open'); document.getElementById('m-nome').value=''; document.getElementById('m-prev').style.display='none'; modalFileData=null;}
-function fecharModal(){document.getElementById('modal').classList.remove('open');}
-function uploadProdFile(ev){
-  const f=ev.target.files[0]; if(!f) return;
-  const r=new FileReader();
-  r.onload=e=>{modalFileData=e.target.result; const p=document.getElementById('m-prev'); p.src=modalFileData; p.style.display='block'; if(!document.getElementById('m-nome').value) document.getElementById('m-nome').value=f.name.replace(/\.[^.]+$/,'');};
-  r.readAsDataURL(f);
-}
-function removerFundoAsync(src,tol=240,soft=12){
-  return new Promise((res,rej)=>{
-    const img=new Image(); img.crossOrigin='anonymous';
-    img.onload=()=>{
-      const c=document.createElement('canvas'); c.width=img.naturalWidth; c.height=img.naturalHeight;
-      const ctx=c.getContext('2d'); ctx.drawImage(img,0,0);
-      const d=ctx.getImageData(0,0,c.width,c.height), px=d.data, ts=Math.max(1,tol-soft);
-      for(let i=0;i<px.length;i+=4){
-        const m=Math.min(px[i],px[i+1],px[i+2]);
-        if(m>=tol) px[i+3]=0;
-        else if(m>=ts){const r=(m-ts)/(tol-ts); px[i+3]=Math.round(px[i+3]*(1-r));}
-      }
-      ctx.putImageData(d,0,0); res(c.toDataURL('image/png'));
-    };
-    img.onerror=rej; img.src=src;
+  document.querySelectorAll('.accordion-header').forEach(function(h){
+    h.addEventListener('click', function(){
+      var acc = h.parentElement;
+      acc.classList.toggle('open');
+    });
   });
-}
-async function addProduto(){
-  const nome=document.getElementById('m-nome').value.trim();
-  if(!nome||!modalFileData){alert('Nome e imagem obrigatórios'); return;}
-  let url=modalFileData;
-  if(document.getElementById('m-rmbg').checked){try{url=await removerFundoAsync(url);}catch(e){}}
-  const p={id:'p'+Date.now(),nome,url};
-  galeria.unshift(p);
-  localStorage.setItem(LS_GAL,JSON.stringify(galeria));
-  fecharModal(); renderGaleria(); escolherProduto(p.id);
-}
-
-function uploadLogo(ev){const f=ev.target.files[0]; if(!f) return; const r=new FileReader(); r.onload=e=>{layout.logoImg=e.target.result; salvarLayout(); render();}; r.readAsDataURL(f);}
-
-function salvarOferta(){
-  const o={id:editandoId||'o'+Date.now(),nome:document.getElementById('f-nome').value,preco:parseFloat(document.getElementById('f-preco').value||'0'),un:document.getElementById('f-un').value,produto:produtoAtual};
-  if(editandoId) ofertas=ofertas.map(x=>x.id===editandoId?o:x); else ofertas.unshift(o);
-  localStorage.setItem(LS_OF,JSON.stringify(ofertas));
-  editandoId=null; document.getElementById('edit-badge').style.display='none';
-  if(slotSelecionado!==null){layout.slots[slotSelecionado]=o.id; slotSelecionado=null; salvarLayout();}
-  renderOfertas(); render();
-  if(isMobile()) abrirAba('lista');
-}
-function renderOfertas(){
-  document.getElementById('of-count').textContent=ofertas.length;
-  const el=document.getElementById('of-lista');
-  if(!ofertas.length){el.innerHTML='<div style="text-align:center;padding:16px;color:var(--cinza);font-size:11px">Nenhuma oferta</div>'; return;}
-  const assigned=new Set(Object.values(layout.slots));
-  el.innerHTML=ofertas.map(o=>{
-    const slot=Object.entries(layout.slots).find(([k,v])=>v===o.id);
-    return `<div class="of-card ${assigned.has(o.id)?'assigned':''}" onclick="clicarOferta('${o.id}')">
-      <img src="${o.produto?o.produto.url:''}">
-      <div class="of-info"><div class="of-nome">${o.nome}</div><div class="of-preco">R$ ${o.preco.toFixed(2)} / ${o.un}</div></div>
-      ${slot?`<span class="of-slot">#${+slot[0]+1}</span>`:''}
-      <button class="btn btn-sm" style="background:#fee;color:#c00" onclick="event.stopPropagation();delOferta('${o.id}')">✕</button>
-    </div>`;
-  }).join('');
-}
-function clicarOferta(id){
-  const o=ofertas.find(x=>x.id===id); if(!o) return;
-  if(slotSelecionado!==null){layout.slots[slotSelecionado]=id; slotSelecionado=null; salvarLayout(); renderOfertas(); render(); return;}
-  editandoId=id;
-  document.getElementById('f-nome').value=o.nome;
-  document.getElementById('f-preco').value=o.preco;
-  document.getElementById('f-un').value=o.un;
-  if(o.produto){produtoAtual=o.produto; renderGaleria();}
-  document.getElementById('edit-badge').style.display='inline-block';
-  if(isMobile()) abrirAba('oferta');
-}
-function delOferta(id){
-  if(!confirm('Remover?')) return;
-  ofertas=ofertas.filter(x=>x.id!==id);
-  Object.keys(layout.slots).forEach(k=>{if(layout.slots[k]===id) delete layout.slots[k];});
-  localStorage.setItem(LS_OF,JSON.stringify(ofertas));
-  salvarLayout(); renderOfertas(); render();
-}
-
-function render(){
-  layout.cor=document.getElementById('cor-faixa').value;
-  layout.corTxt=document.getElementById('cor-txt').value;
-  layout.logoTxt=document.getElementById('logo-txt').value||'SUA LOGO';
-  salvarLayout();
-  const fmt=FORMATOS.find(f=>f.id===layout.fmt);
-  const a4=document.getElementById('a4');
-  a4.className='a4 '+fmt.grid;
-  a4.innerHTML=fmt.id===1?htmlRico(ofertas.find(o=>o.id===layout.slots[0])):htmlGrade(fmt.celulas);
-  requestAnimationFrame(()=>escalarCelulas(a4));
-}
-function htmlRico(o){
-  const cor=layout.cor, ct=layout.corTxt;
-  const nome=(o?o.nome:'SEU PRODUTO').toUpperCase();
-  const preco=(o?o.preco:0).toFixed(2).split('.');
-  const un=o?o.un:'CADA';
-  const prod=o&&o.produto?`<img src="${o.produto.url}">`:'<div style="color:#bbb;font-family:Barlow Condensed,sans-serif;font-size:14px;text-align:center">Toque e atribua<br>uma oferta</div>';
-  const logo=layout.logoImg?`<img src="${layout.logoImg}">`:`<span>${layout.logoTxt}</span>`;
-  return `
-    <div class="enc-logo-box" style="font-size:clamp(10px,2.8vw,18px)">${logo}</div>
-    <div class="enc-prod-box ${slotSelecionado===0?'sel':''}" onclick="selecionarSlot(0)">${prod}</div>
-    <div class="enc-faixa" style="background:${cor};color:${ct}">
-      <div class="enc-fn"><div class="enc-fn-nome" style="font-size:clamp(14px,5vw,36px);color:${ct}">${nome}</div></div>
-      <div class="enc-fp" style="color:${ct}">
-        <span class="enc-rs" style="font-size:clamp(8px,2.2vw,18px);color:${ct}">R$</span>
-        <span class="enc-val" style="font-size:clamp(30px,12vw,90px);color:${ct}">${preco[0]}</span>
-        <div class="enc-dir">
-          <span class="enc-cent" style="font-size:clamp(12px,4vw,32px);color:${ct}">,${preco[1]}</span>
-          <span class="enc-un" style="font-size:clamp(7px,1.8vw,14px);color:${ct}">${un}</span>
-        </div>
-      </div>
-    </div>`;
-}
-function htmlGrade(n){let o=''; for(let i=0;i<n;i++){const id=layout.slots[i]; const of=id?ofertas.find(x=>x.id===id):null; o+=celula(i,of);} return o;}
-function celula(i,o){
-  const cor=layout.cor, ct=layout.corTxt;
-  const sel=slotSelecionado===i?'sel':'';
-  if(!o) return `<div class="cel empty ${sel}" onclick="selecionarSlot(${i})"></div>`;
-  const [r,c]=o.preco.toFixed(2).split('.');
-  return `<div class="cel ${sel}" onclick="selecionarSlot(${i})">
-    <div class="cel-img">${o.produto?`<img src="${o.produto.url}">`:''}</div>
-    <div class="cel-faixa" style="background:${cor};color:${ct}">
-      <div class="cel-nome" style="color:${ct}">${o.nome.toUpperCase()}</div>
-      <div class="cel-preco" style="color:${ct}">
-        <span class="cel-rs" style="color:${ct}">R$</span>
-        <span class="cel-val">${r}</span>
-        <span class="cel-cent">,${c}</span>
-      </div>
-    </div>
-  </div>`;
-}
-function escalarCelulas(root){
-  root.querySelectorAll('.cel:not(.empty)').forEach(cel=>{
-    const h=cel.getBoundingClientRect().height; if(!h) return;
-    const n=cel.querySelector('.cel-nome'), rs=cel.querySelector('.cel-rs'), v=cel.querySelector('.cel-val'), c=cel.querySelector('.cel-cent');
-    if(n) n.style.fontSize=(h*0.10)+'px';
-    if(rs) rs.style.fontSize=(h*0.07)+'px';
-    if(v) v.style.fontSize=(h*0.22)+'px';
-    if(c) c.style.fontSize=(h*0.10)+'px';
-  });
-}
-
-function selecionarSlot(i){
-  slotSelecionado=i; render();
-  if(isMobile()) abrirAba('lista');
-}
-
-// ═══ ADAPTAÇÃO: MESMO PAINEL, 2 MODOS ═══
-function abrirAba(sec){
-  // só faz sentido no mobile — mostra só a seção ativa
-  document.querySelectorAll('.secao').forEach(s=>s.classList.toggle('active',s.dataset.sec===sec));
-  document.querySelectorAll('.mob-tab').forEach(t=>t.classList.toggle('sel',t.dataset.tab===sec));
-  document.getElementById('painel').classList.add('open');
-  document.getElementById('painel').scrollTop=0;
-}
-function fecharPainel(){document.getElementById('painel').classList.remove('open');}
-
-// toggle painel via toque no preview (mobile)
-document.querySelector('.preview').addEventListener('click',e=>{
-  if(!isMobile()) return;
-  const painel=document.getElementById('painel');
-  if(painel.classList.contains('open') && !e.target.closest('.a4') && !e.target.closest('.p-tools')){
-    fecharPainel();
-  }
-});
-
-function imprimir(){
-  const src=document.getElementById('a4');
-  const dst=document.getElementById('a4-print');
-  const fmt=FORMATOS.find(f=>f.id===layout.fmt);
-  dst.className='a4-print '+fmt.grid;
-  dst.innerHTML=src.innerHTML;
-  const A4H=297*96/25.4;
-  const r=src.getBoundingClientRect();
-  const k=A4H/r.height;
-  const esc=(el)=>{if(el.style){const fs=el.style.fontSize; if(fs&&fs.endsWith('px')) el.style.fontSize=(parseFloat(fs)*k)+'px';} [...(el.children||[])].forEach(esc);};
-  esc(dst);
-  if(fmt.id===1){
-    [['.enc-fn-nome',36],['.enc-val',90],['.enc-cent',32],['.enc-rs',18],['.enc-un',14],['.enc-logo-box span',28]].forEach(([s,p])=>{const e=dst.querySelector(s); if(e) e.style.fontSize=(p*k*(r.width/480))+'px';});
-  }
-  window.print();
-}
-
-function init(){
-  document.getElementById('cor-faixa').value=layout.cor;
-  document.getElementById('cor-txt').value=layout.corTxt;
-  document.getElementById('logo-txt').value=layout.logoTxt;
-  ['cor-faixa','cor-txt','logo-txt'].forEach(id=>document.getElementById(id).addEventListener('input',render));
-  renderFormatos(); renderGaleria(); renderOfertas(); render();
-  window.addEventListener('resize',()=>{escalarCelulas(document.getElementById('a4'));});
-}
-init();
 </script>
+
 </body>
 </html>
+"""
+
+with open('output/index.html','w',encoding='utf-8') as f:
+    f.write(html)
+
+print("OK", len(html), "chars")
